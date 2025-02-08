@@ -1,4 +1,4 @@
-# Proyecto: [IN-CODE-COIN]
+# Proyecto: IN-CODE-COIN
 
 ## Descripción
 
@@ -30,21 +30,17 @@ El sitio está alojado en **GitHub Pages**.
 
 1. **Clonar el repositorio:**
    ```sh
-   git clone https://github.com/TU-ORGANIZACION/mi-proyecto.git
+   git clone https://github.com/TU-ORGANIZACION/in-code-solutions.git
    ```
-2. **Abrir el archivo **``** en un navegador.**
+2. **Abrir el archivo **index.html** en un navegador.**
 3. (Opcional) Usar una extensión como **Live Server** en VS Code para probar localmente.
 
 ## Despliegue en GitHub Pages
 
 Este proyecto está desplegado en GitHub Pages. Para acceder al sitio en línea, visita:
 
-🔗 [**https://TU-ORGANIZACION.github.io/mi-proyecto/**](https://TU-ORGANIZACION.github.io/mi-proyecto/)
+🔗 [**https://TU-ORGANIZACION.github.io/in-code-solutions/**](https://TU-ORGANIZACION.github.io/in-code-solutions/)
 
-Si deseas actualizar el despliegue:
-
-1. **Sube los cambios a la rama **`` del repositorio.
-2. **Verifica en **``** que la fuente sea **``** y la carpeta raíz **``.
 
 ## Tecnologías Utilizadas
 
@@ -65,7 +61,7 @@ Si deseas contribuir, sigue estos pasos:
 
 ## Autor
 
-✍️ **[Sergio López Ruiz]** – [sergio.lopezr.88@gmail.com]
+✍️ **Sergio López Ruiz** – sergio.lopezr.88@gmail.com
 
 ## Licencia
 
