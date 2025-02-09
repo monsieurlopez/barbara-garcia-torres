@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const mobileMenu = document.getElementById("mobile-menu");
+  const SMALL_SCREEN_MENU = document.getElementById("mobile-menu");
 
-  // Redirigir al seleccionar una opción
-  mobileMenu.addEventListener("change", function () {
-    const selectedValue = this.value;
-    if (selectedValue) {
-      window.location.href = selectedValue;
+  // Redirigir al link seleccionado
+  SMALL_SCREEN_MENU.addEventListener("change", function () {
+    const SELECTED_VALUE = this.value;
+    if (SELECTED_VALUE) {
+      window.location.href = SELECTED_VALUE;
     }
   });
 });
