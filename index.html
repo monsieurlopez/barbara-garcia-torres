@@ -20,20 +20,18 @@
         src="./assets/icons-svg/Logo-incodecoin.svg"
         alt="imagen de la empresa In Code Coin"
       />
+      
+      <!-- Menú para pantallas grandes -->
       <nav class="header__nav">
         <ul class="header__menu">
           <li class="header__menu-item">
             <a class="header__menu-link" href="index.html">Inicio</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="pages/dashboard.html"
-              >Dashboard</a
-            >
+            <a class="header__menu-link" href="pages/dashboard.html">Dashboard</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="pages/conversor.html"
-              >Conversor</a
-            >
+            <a class="header__menu-link" href="pages/conversor.html">Conversor</a>
           </li>
           <li class="header__menu-item">
             <a class="header__menu-link" href="pages/noticias.html">Noticias</a>
@@ -42,15 +40,25 @@
             <a class="header__menu-link" href="pages/contacto.html">Contacto</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="pages/aviso-legal.html"
-              >Aviso Legal</a
-            >
+            <a class="header__menu-link" href="pages/aviso-legal.html">Aviso Legal</a>
           </li>
         </ul>
       </nav>
+
+      <!-- Select para pantallas pequeñas -->
+      <select class="header__select form-select form-select-sm" id="mobile-menu">
+        <option selected disabled> Navegar </option>
+        <option value="index.html">Inicio</option>
+        <option value="pages/dashboard.html">Dashboard</option>
+        <option value="pages/conversor.html">Conversor</option>
+        <option value="pages/noticias.html">Noticias</option>
+        <option value="pages/contacto.html">Contacto</option>
+        <option value="pages/aviso-legal.html">Aviso Legal</option>
+      </select>
     </header>
 
-    <main></main>
+    <main>
+    </main>
     <footer></footer>
   </body>
 </html>
