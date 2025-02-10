@@ -1,33 +1,32 @@
-/* ESTILOS CORRESPONDIENTES AL FICHERO dashboard.html */
+/* ESTILOS CORRESPONDIENTES AL FICHERO mercados.html */
 
 /* Estilos para la sección de criptomonedas */
-.dashboard__crypto {
+.mercados__crypto {
     width: 100%;
     max-width: 80rem;
     margin: 0 auto;
 }
 
-.dashboard__title {
-    font-size: 2.5rem;
+.mercados__title {
     font-weight: bold;
     margin-bottom: 1.25rem;
     text-align: center;
 }
 
 /* Estilos de la tabla */
-.dashboard__table-container {
+.mercados__table-container {
     width: 100%;
     overflow-x: auto;
 }
 
-.dashboard__table {
+.mercados__table {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
 }
 
 /* Cabecera de la tabla */
-.dashboard__table-header {
+.mercados__table-header {
     padding: 0.5rem;
     font-weight: bold;
     background-color: #f4f4f4;
@@ -35,29 +34,29 @@
 }
 
 /* Filas y celdas */
-.dashboard__table-row {
-    border-bottom: 1px solid #ddd;
+.mercados__table-row {
+    border-bottom: 0.1rem solid #ddd;
 }
 
-.dashboard__table-row:nth-child(odd) {
-    background-color: #f9f9f9;
+.mercados__table-row:hover {
+    background-color: #f4f4f4;
 }
 
-.dashboard__table-cell {
-    padding: 10px;
+.mercados__table-cell {
+    padding: 1rem;
 }
 
 /* Estilos del logo */
-.dashboard__table-logo {
-    width: 32px;
-    height: 32px;
+.mercados__table-logo {
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 /* Cambia el color del porcentaje según sea positivo o negativo */
-.dashboard__table-change--positive {
+.mercados__table-change--positive {
     color: green;
 }
 
-.dashboard__table-change--negative {
+.mercados__table-change--negative {
     color: red;
 }

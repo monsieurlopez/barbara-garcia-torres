@@ -7,7 +7,7 @@ Este proyecto es un sitio web desarrollado con **HTML, CSS y JavaScript**, que i
 - **Landing Page**
 - **Formulario de Contacto**
 - **Aviso Legal**
-- **Dashboard de Criptomonedas y Divisas**
+- **mercados de Criptomonedas y Divisas**
 - **Noticias**
 - **Conversor de Monedas**
 
