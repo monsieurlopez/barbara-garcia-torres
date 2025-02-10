@@ -80,6 +80,20 @@ main {
   transition: color 0.3s ease;
 }
 
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #333;
+  color: white;
+  align-items: center;
+}
+
+.footer__text {
+  margin: 0;
+  padding: 0
+}
+
 @media (max-width: 1000px) {
     main {
         background: #fff;
