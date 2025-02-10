@@ -39,7 +39,7 @@ El sitio está alojado en **GitHub Pages**.
 
 Este proyecto está desplegado en GitHub Pages. Para acceder al sitio en línea, visita:
 
-🔗 [**https://TU-ORGANIZACION.github.io/in-code-solutions/**](https://TU-ORGANIZACION.github.io/in-code-solutions/)
+🔗 [**https://in-code-coin.github.io/in-code-solutions/**](https://in-code-coin.github.io/in-code-solutions/)
 
 
 ## Tecnologías Utilizadas
