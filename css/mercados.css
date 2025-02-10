@@ -1,6 +1,6 @@
 /* ESTILOS CORRESPONDIENTES AL FICHERO mercados.html */
 
-/* Estilos para la sección de criptomonedas */
+/* ESTILOS PARA LAS CRYPTOMONEDAS */
 .mercados__crypto {
     width: 100%;
     max-width: 80rem;
@@ -60,3 +60,5 @@
 .mercados__table-change--negative {
     color: red;
 }
+
+/* ESTILOS PARA LAS DIVISAS */
