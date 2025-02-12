@@ -7,7 +7,11 @@ class CustomSelect {
     this.input = document.createElement("input");
     this.input.type = "text";
     this.input.classList.add("custom-select-input");
-    this.input.placeholder = "🔍 Buscar...";
+    if (elementId === "custom-base-currency") {
+      this.input.placeholder = "🔍 Divisa origen";
+    } else {
+      this.input.placeholder = "🔍 Divisa destino";
+    }
 
     this.optionsContainer = document.createElement("div");
     this.optionsContainer.classList.add("custom-select-options");
@@ -74,7 +78,7 @@ class CustomSelect {
 // Cargar opciones desde divisas.js
 const currencyOptions = Object.entries(listaDivisas).map(([key, name]) => ({
   value: key,
-  text: `${key} - ${name}`,
+  text: `${name}`,
 }));
 
 let selectedBaseCurrency = "";
