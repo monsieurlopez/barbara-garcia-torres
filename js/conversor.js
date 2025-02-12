@@ -1,3 +1,4 @@
+//* Creación de una clase personalizada para los inputs de búsqueda *//
 class CustomSelect {
   constructor(elementId, options, onSelect) {
     this.container = document.getElementById(elementId);
@@ -84,7 +85,7 @@ const currencyOptions = Object.entries(listaDivisas).map(([key, name]) => ({
 let selectedBaseCurrency = "";
 let selectedTargetCurrency = "";
 
-// Crear selects personalizados
+// Crear selects personalizados con la clase 'CustomSelect'
 new CustomSelect("custom-base-currency", currencyOptions, (value) => {
   selectedBaseCurrency = value;
 });
@@ -93,12 +94,13 @@ new CustomSelect("custom-target-currency", currencyOptions, (value) => {
   selectedTargetCurrency = value;
 });
 
-// Función de conversión (ajustada para los nuevos selects)
+//* Función de conversión de divisas *//
 function convertCurrency() {
   const amount = parseFloat(document.getElementById("amount").value);
 
   if (!selectedBaseCurrency || !selectedTargetCurrency || isNaN(amount)) return;
 
+  //* Llamada a la API cuando tenemos los parámetros necesarios *//
   fetch(
     `https://api.frankfurter.app/latest?base=${selectedBaseCurrency}&symbols=${selectedTargetCurrency}`
   )
@@ -122,12 +124,11 @@ function convertCurrency() {
     });
 }
 
-// Evento para convertir con el botón
 document
   .getElementById("convert-button")
   .addEventListener("click", convertCurrency);
 
-// Convertir al cambiar la cantidad con timeout de 2s
+//* Convertir al cambiar la cantidad con timeout de 2s *//
 let timeoutId;
 document.getElementById("amount").addEventListener("input", () => {
   clearTimeout(timeoutId);
