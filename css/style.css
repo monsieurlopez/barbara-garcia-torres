@@ -96,9 +96,9 @@ footer {
     main {
         background: #fff;
         border-radius: 0.5rem;
-        max-width: 95%;
+        max-width: 100%;
         margin: 5rem auto auto auto;
-        padding: 2rem;
+        padding: 2rem 0.1rem;
         text-align: center;
     }
   .header__nav {
