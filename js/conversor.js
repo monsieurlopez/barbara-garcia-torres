@@ -1,10 +1,17 @@
 //* Creación de una clase personalizada para los inputs de búsqueda *//
 class CustomSelect {
+  /**
+   * Constructor
+   * @param {String} elementId id container element
+   * @param {Array} options text | value
+   * @param {Function} onSelect callback
+   */
   constructor(elementId, options, onSelect) {
+    // Create a new container
     this.container = document.getElementById(elementId);
     this.onSelect = onSelect;
 
-    // Crear elementos internos
+    // Create elements
     this.input = document.createElement("input");
     this.input.type = "text";
     this.input.classList.add("custom-select-input");
@@ -23,6 +30,7 @@ class CustomSelect {
     this.options = options;
     this.selectedValue = "";
 
+    // Call method init()
     this.init();
   }
 
@@ -32,13 +40,16 @@ class CustomSelect {
   }
 
   renderOptions() {
+    // Clear options
     this.optionsContainer.innerHTML = "";
 
+    // Create options
     this.options.forEach((option) => {
       const optionElement = document.createElement("div");
       optionElement.textContent = option.text;
       optionElement.dataset.value = option.value;
 
+      // Add event click to every option element
       optionElement.addEventListener("click", () =>
         this.selectOption(option.value, option.text)
       );
@@ -47,10 +58,12 @@ class CustomSelect {
   }
 
   setupEvents() {
+    // Focus container events
     this.input.addEventListener("focus", () => {
       this.optionsContainer.style.display = "block";
     });
 
+    // Add filter method
     this.input.addEventListener("input", () => this.filterOptions());
 
     document.addEventListener("click", (e) => {
@@ -61,6 +74,7 @@ class CustomSelect {
   }
 
   filterOptions() {
+    // Filter options as the text is entered
     const query = this.input.value.toLowerCase();
     this.optionsContainer.querySelectorAll("div").forEach((optionElement) => {
       const text = optionElement.textContent.toLowerCase();
@@ -69,9 +83,11 @@ class CustomSelect {
   }
 
   selectOption(value, text) {
+    // Selected option
     this.selectedValue = value;
     this.input.value = text;
     this.optionsContainer.style.display = "none";
+    // Callback function
     if (this.onSelect) this.onSelect(value);
   }
 }
