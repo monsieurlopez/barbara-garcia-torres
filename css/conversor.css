@@ -68,12 +68,6 @@
   }
 }
 
-.conversor__title {
-  font-weight: bold;
-  margin-bottom: 1.25rem;
-  text-align: center;
-}
-
 .conversor__inputs {
   display: flex;
   flex-direction: column;

@@ -31,38 +31,37 @@ function fetchNews(theme) {
 }
 
 function renderNews(articles) {
-    newsContainer.innerHTML = ""; // Limpiar contenedor antes de agregar nuevas noticias
+  newsContainer.innerHTML = ""; // Limpiar contenedor antes de agregar nuevas noticias
 
-    articles.forEach(article => {
-        const { title, description, url, urlToImage, author, source, publishedAt } = article;
+  articles.slice(0, 10).forEach(article => { // Solo las 10 primeras noticias
+      const { title, description, url, urlToImage, author, source, publishedAt } = article;
 
-        // Truncar la descripción a 120 caracteres
-        const truncatedDescription = description
-            ? description.length > 120
-                ? description.substring(0, 120) + "..."
-                : description
-            : "Sin descripción disponible.";
+      // Truncar la descripción a 120 caracteres
+      const truncatedDescription = description
+          ? description.length > 150
+              ? description.substring(0, 150) + "..."
+              : description
+          : "Sin descripción disponible.";
 
-        const newsCard = document.createElement("div");
-        newsCard.classList.add("card");
+      const newsCard = document.createElement("div");
+      newsCard.classList.add("card");
 
-        newsCard.innerHTML = `
-            <img src="${urlToImage || '../assets/no-image.jpg'}" class="card-img-top" alt="${title}">
-            <div class="card-body">
-                <h5 class="card-title">${title}</h5>
-                <p class="card-text">${truncatedDescription}</p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><strong>Autor:</strong> ${author || "Desconocido"}</li>
-                <li class="list-group-item"><strong>Fuente:</strong> ${source.name || "Desconocida"}</li>
-                <li class="list-group-item"><strong>Fecha:</strong> ${new Date(publishedAt).toLocaleDateString()}</li>
-            </ul>
-            <div class="card-body text-center">
-                <a href="${url}" target="_blank" class="card-link">Leer más</a>
-            </div>
-        `;
+      newsCard.innerHTML = `
+          <img src="${urlToImage || '../assets/no-image.jpg'}" class="card-img-top" alt="${title}">
+          <div class="card-body">
+              <h5 class="card-title">${title}</h5>
+              <p class="card-text">${truncatedDescription}</p>
+              <a href="${url}" target="_blank" class="card-link">Leer más</a>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Autor:</strong> ${author || "Desconocido"}</li>
+              <li class="list-group-item"><strong>Fuente:</strong> ${source.name || "Desconocida"}</li>
+              <li class="list-group-item"><strong>Fecha:</strong> ${new Date(publishedAt).toLocaleDateString()}</li>
+          </ul>
+      `;
 
-        newsContainer.appendChild(newsCard);
-    });
+      newsContainer.appendChild(newsCard);
+  });
 }
+
 

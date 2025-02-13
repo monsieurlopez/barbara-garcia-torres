@@ -33,7 +33,8 @@
 }
 
 .card-body {
-  flex-grow: 1;
+  /*flex-grow: 1;*/
+  min-height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
