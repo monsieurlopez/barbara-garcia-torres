@@ -60,3 +60,9 @@
 .card-link:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 1000px) {
+  .news__search-input {
+    width: 60%;
+  }
+}
