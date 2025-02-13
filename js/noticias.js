@@ -1,8 +1,8 @@
-const api_key_newsapi = "f197acd3be3a44dda2cb6e6c2606c6ca";
+const api_key_gnews = "465e9d4b6e7586b7fdf8239c40b72870";
 const searchInput = document.getElementById("news-search");
 const newsContainer = document.getElementById("news-container");
 let timeout = null;
-const numberNews = 15;
+const numberNews = 10;
 
 //* 2s after introduce input letre *//
 searchInput.addEventListener("input", () => {
@@ -17,12 +17,12 @@ searchInput.addEventListener("input", () => {
 
 //* Función que llama a la API para obtener las noticias *//
 function fetchNews(theme) {
-  const date = new Date();
-  date.setDate(date.getDate() - 1);
-  const yesterdayDate = date.toISOString().split("T")[0]; // Obligatory date yesterday (-24h)
+  const language = "es"
+  const country = "es"
+  const url = `https://gnews.io/api/v4/search?q=${theme}&lang=${language}&country=${country}&max=${numberNews}&apikey=${api_key_gnews}`;
 
   fetch(
-    `https://newsapi.org/v2/everything?q=${theme}&from=${yesterdayDate}&sortBy=popularity&apiKey=${api_key_newsapi}`
+    `${url}`
   )
     .then((response) => response.json())
     .then((data) => {
@@ -38,14 +38,14 @@ function renderNews(articles) {
   newsContainer.innerHTML = "";
 
   articles.slice(0, numberNews).forEach(article => { // Solo las primeras ${numberNews} noticias
-      const { title, description, url, urlToImage, author, source, publishedAt } = article;
+      const { title, description, url, image, author, source, publishedAt } = article;
 
       const newCard = document.createElement("div");
       newCard.classList.add("card");
 
       //Estructure card bootstrap
       newCard.innerHTML = `
-          <img src="${urlToImage || '../assets/no-image.jpg'}" class="card-img-top" alt="${title}">
+          <img src="${image} || '../assets/no-image.jpg'}" class="card-img-top" alt="${title}">
           <div class="card-body">
               <h5 class="card-title">${title}</h5>
               <p class="card-text">${description}</p>
