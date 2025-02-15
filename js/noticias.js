@@ -17,9 +17,8 @@ searchInput.addEventListener("input", () => {
 
 //* Función que llama a la API para obtener las noticias *//
 function fetchNews(theme) {
-  const language = "es"
-  const country = "es"
-  const url = `https://gnews.io/api/v4/search?q=${theme}&lang=${language}&country=${country}&max=${numberNews}&apikey=${api_key_gnews}`;
+  const language = "es" // "en" para el lenguaje inglés
+  const url = `https://gnews.io/api/v4/search?q=${theme}&lang=${language}&max=${numberNews}&apikey=${api_key_gnews}`;
 
   fetch(
     `${url}`
