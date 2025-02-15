@@ -25,6 +25,11 @@ main {
     padding: 2rem;
 }
 
+section {
+  text-align: center;
+  padding: 2rem 0;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -63,12 +68,14 @@ main {
 
 .header__menu-item {
   display: inline-block;
+  color: #0B172F;
+
 }
 
 .header__menu-link {
   text-decoration: none;
   font-weight: bold;
-  color: black;
+  color: #0B172F;
   font-size: 1rem;
   transition: color 0.3s ease;
 }
@@ -82,7 +89,7 @@ footer {
   text-align: center;
   margin-top: 2rem;
   padding: 1.5rem;
-  background: #333;
+  background: #0B172F;
   color: white;
   align-items: center;
 }

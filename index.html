@@ -33,7 +33,9 @@
             <a class="header__menu-link" href="pages/mercados.html">Mercados</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="pages/conversor.html">Conversor</a>
+            <a class="header__menu-link" href="pages/conversor.html"
+              >Conversor</a
+            >
           </li>
           <li class="header__menu-item">
             <a class="header__menu-link" href="pages/noticias.html">Noticias</a>
@@ -42,13 +44,18 @@
             <a class="header__menu-link" href="pages/contacto.html">Contacto</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="pages/aviso-legal.html">Aviso Legal</a>
+            <a class="header__menu-link" href="pages/aviso-legal.html"
+              >Aviso Legal</a
+            >
           </li>
         </ul>
       </nav>
 
       <!-- Select para pantallas pequeñas -->
-      <select class="header__select form-select form-select-sm" id="mobile-menu">
+      <select
+        class="header__select form-select form-select-sm"
+        id="mobile-menu"
+      >
         <option value="index.html" selected>Inicio</option>
         <option value="pages/mercados.html">Mercados</option>
         <option value="pages/conversor.html">Conversor</option>
@@ -59,9 +66,56 @@
     </header>
 
     <main>
+      <!-- Logo -->
+      <section class="hero">
+        <img
+          src="./assets/images/Logo-incodecoin.png"
+          alt="Logo In Code Coin"
+          class="hero__logo img-fluid"
+        />
+      </section>
+
+      <!-- Sección Servicios -->
+      <section class="services">
+        <h2 class="services__title title__section">Nuestros Servicios</h2>
+        <div
+          class="services__container d-flex flex-wrap justify-content-center gap-3"
+          id="services-container"
+        >
+          <!-- Aquí se generarán las tarjetas dinámicamente -->
+        </div>
+      </section>
+
+      <!-- Sección Sobre Nosotros -->
+      <section class="about">
+        <h2 class="about__title title__section">Sobre In Code Coin</h2>
+        <div class="about__content">
+          <div class="about__text">
+            <p class="about__description">
+              En In Code Coin nos especializamos en ofrecer información
+              actualizada sobre las principales criptomonedas y divisas, todo
+              esta información se muestra en tiempo real y de manera clara y
+              sencilla.
+            </p>
+            <p class="about__description">
+              Nuestro objetivo es que todo el mundo pueda estar al día de los
+              precios sin grandes complejidades.
+            </p>
+          </div>
+          <div class="about__image-container">
+            <img
+              src="./assets/images/img-about.png"
+              alt="Mercado de criptomonedas"
+              class="about__image img-fluid"
+            />
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
-      <p class="footer__text">&copy; 2025 In Code Coin - Todos los derechos reservados.</p>
+      <p class="footer__text">
+        &copy; 2025 In Code Coin - Todos los derechos reservados.
+      </p>
     </footer>
   </body>
 </html>
