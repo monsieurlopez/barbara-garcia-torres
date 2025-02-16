@@ -12,6 +12,9 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/mercados.css" />
+    <!-- GridJS -->
+    <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
     <!-- JS -->
     <script src="../js/app.js"></script>
     <script src="../js/mercados.js"></script>
@@ -106,22 +109,7 @@
           Cryptomonedas por Capitalización
         </h2>
         <div class="mercados__table-container">
-          <table class="mercados__table">
-            <thead class="mercados__table-head">
-              <tr class="mercados__table-row">
-                <th class="mercados__table-header">Logo</th>
-                <th class="mercados__table-header">Nombre</th>
-                <th class="mercados__table-header">Símbolo</th>
-                <th class="mercados__table-header">Precio (USD)</th>
-                <th class="mercados__table-header">Variación 24h</th>
-                <th class="mercados__table-header">Capitalización (USD)</th>
-                <th class="mercados__table-header">Volumen 24h (USD)</th>
-              </tr>
-            </thead>
-            <tbody id="mercados__table-body" class="mercados__table-body">
-              <!-- Datos insertados dinámicamente -->
-            </tbody>
-          </table>
+          <div id="mercados__grid" class="mercados__crypto"></div>
         </div>
       </section>
       <section
