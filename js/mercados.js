@@ -76,7 +76,6 @@ function fetchDivisas() {
   fetch(`https://api.fxfeed.io/v1/latest?base=${baseEur}&currencies=${currenciesEUR}&api_key=${api_key_fx}`)
     .then(response => response.json())
     .then(data => {
-    console.log(data)
       const tableBody = document.getElementById("mercados__divisas-body-eur");
       tableBody.innerHTML = ""; // Limpiar la tabla antes de actualizar
       const ultimaFecha = document.getElementById("mercados__actualizacion");
