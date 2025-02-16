@@ -1,4 +1,5 @@
-const api_key_coinranking = "coinranking22b1d5f1ed17ba55bcd4a9c076747c62d4bca3520a85df31";
+const api_key_coinranking =
+  "coinranking22b1d5f1ed17ba55bcd4a9c076747c62d4bca3520a85df31";
 const api_key_fx = "fxf_IbCpIl0sJD8z8xkkB25k";
 
 const options = {
@@ -8,15 +9,15 @@ const options = {
 };
 // Función para formatear la fecha en formato legible
 function formatDateTime(dateString) {
-    const date = new Date(dateString);
-    return date.toLocaleString("es-ES", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-    });
+  const date = new Date(dateString);
+  return date.toLocaleString("es-ES", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  });
 }
 
 // Función para formatear números grandes
@@ -36,95 +37,107 @@ const limitCryptos = 15;
 // Función para obtener criptomonedas
 function fetchCryptos() {
   fetch(`https://api.coinranking.com/v2/coins?limit=${limitCryptos}`, options)
-    .then(response => response.json())
-    .then(result => {
+    .then((response) => response.json())
+    .then((result) => {
       const coins = result.data.coins;
       const tableBody = document.getElementById("mercados__table-body");
-      tableBody.innerHTML = ""; // Limpiar la tabla antes de actualizar
+      tableBody.innerHTML = "";
 
-      coins.forEach(coin => {
-        const row = document.createElement("tr");
-        row.classList.add("mercados__table-row");
+      const rows = coins.map((coin) => {
+        const changeClass =
+          coin.change >= 0
+            ? "mercados__table-change--positive"
+            : "mercados__table-change--negative";
 
-        const changeClass = coin.change >= 0 ? "mercados__table-change--positive" : "mercados__table-change--negative";
-
-        row.innerHTML = `
-          <td class="mercados__table-cell">
-            <img class="mercados__table-logo" src="${coin.iconUrl}" alt="${coin.name} logo">
-          </td>
-          <td class="mercados__table-cell">${coin.name}</td>
-          <td class="mercados__table-cell">${coin.symbol}</td>
-          <td class="mercados__table-cell">$${parseFloat(coin.price).toFixed(2)}</td>
-          <td class="mercados__table-cell ${changeClass}">${coin.change}%</td>
-          <td class="mercados__table-cell">$${formatLargeNumber(coin.marketCap)}</td>
-          <td class="mercados__table-cell">$${formatLargeNumber(coin["24hVolume"])}</td>
+        return `
+          <tr class="mercados__table-row">
+            <td class="mercados__table-cell">
+              <img class="mercados__table-logo" src="${coin.iconUrl}" alt="${
+          coin.name
+        } logo">
+            </td>
+            <td class="mercados__table-cell">${coin.name}</td>
+            <td class="mercados__table-cell">${coin.symbol}</td>
+            <td class="mercados__table-cell">$${parseFloat(coin.price).toFixed(
+              2
+            )}</td>
+            <td class="mercados__table-cell ${changeClass}">${coin.change}%</td>
+            <td class="mercados__table-cell">$${formatLargeNumber(
+              coin.marketCap
+            )}</td>
+            <td class="mercados__table-cell">$${formatLargeNumber(
+              coin["24hVolume"]
+            )}</td>
+          </tr>
         `;
-
-        tableBody.appendChild(row);
       });
+
+      tableBody.innerHTML = rows.join("");
     })
-    .catch(error => console.error("Error al obtener criptomonedas:", error));
+    .catch((error) => console.error("Error al obtener criptomonedas:", error));
 }
 
 // Función para obtener tasas de cambio
 function fetchDivisas() {
-    const baseEur = "EUR";
-    const baseUsd = "USD";
-    const currenciesEUR = "USD,GBP,CHF,JPY,CAD,AUD,HKD,MXN";
-    const currenciesUSD = "EUR,GBP,CHF,JPY,CAD,AUD,HKD,MXN";
+  const baseEur = "EUR";
+  const baseUsd = "USD";
+  const currenciesEUR = "USD,GBP,CHF,JPY,CAD,AUD,HKD,MXN";
+  const currenciesUSD = "EUR,GBP,CHF,JPY,CAD,AUD,HKD,MXN";
 
-  fetch(`https://api.fxfeed.io/v1/latest?base=${baseEur}&currencies=${currenciesEUR}&api_key=${api_key_fx}`)
-    .then(response => response.json())
-    .then(data => {
+  fetch(
+    `https://api.fxfeed.io/v1/latest?base=${baseEur}&currencies=${currenciesEUR}&api_key=${api_key_fx}`
+  )
+    .then((response) => response.json())
+    .then((data) => {
       const tableBody = document.getElementById("mercados__divisas-body-eur");
-      tableBody.innerHTML = ""; // Limpiar la tabla antes de actualizar
+      tableBody.innerHTML = "";
       const ultimaFecha = document.getElementById("mercados__actualizacion");
-      ultimaFecha.textContent = `Última actualización: ${formatDateTime(data.date)} ✔️`
+      ultimaFecha.textContent = `Última actualización: ${formatDateTime(
+        data.date
+      )} ✔️`;
 
       if (data.success) {
-        Object.entries(data.rates).forEach(([currency, rate]) => {
-          const row = document.createElement("tr");
-          row.classList.add("mercados__table-row");
-
-          row.innerHTML = `
-            <td class="mercados__table-cell">${currency}</td>
-            <td class="mercados__table-cell">${rate.toFixed(4)}</td>
+        const rows = Object.entries(data.rates).map(([currency, rate]) => {
+          return `
+            <tr class="mercados__table-row">
+              <td class="mercados__table-cell">${currency}</td>
+              <td class="mercados__table-cell">${rate.toFixed(4)}</td>
+            </tr>
           `;
-
-          tableBody.appendChild(row);
         });
+
+        tableBody.innerHTML = rows.join("");
       } else {
         console.error("Error en la API de divisas:", data.error.info);
       }
     })
-    .catch(error => console.error("Error al obtener divisas:", error));
+    .catch((error) => console.error("Error al obtener divisas:", error));
 
-    fetch(`https://api.fxfeed.io/v1/latest?base=${baseUsd}&currencies=${currenciesUSD}&api_key=${api_key_fx}`)
-    .then(response => response.json())
-    .then(data => {
+  fetch(
+    `https://api.fxfeed.io/v1/latest?base=${baseUsd}&currencies=${currenciesUSD}&api_key=${api_key_fx}`
+  )
+    .then((response) => response.json())
+    .then((data) => {
       const tableBody = document.getElementById("mercados__divisas-body-usd");
-      tableBody.innerHTML = ""; // Limpiar la tabla antes de actualizar
+      tableBody.innerHTML = "";
 
       if (data.success) {
-        Object.entries(data.rates).forEach(([currency, rate]) => {
-          const row = document.createElement("tr");
-          row.classList.add("mercados__table-row");
-
-          row.innerHTML = `
-            <td class="mercados__table-cell">${currency}</td>
-            <td class="mercados__table-cell">${rate.toFixed(4)}</td>
-          `;
-
-          tableBody.appendChild(row);
+        const rows = Object.entries(data.rates).map(([currency, rate]) => {
+          return `
+              <tr class="mercados__table-row">
+                <td class="mercados__table-cell">${currency}</td>
+                <td class="mercados__table-cell">${rate.toFixed(4)}</td>
+              </tr>
+            `;
         });
+
+        tableBody.innerHTML = rows.join("");
       } else {
         console.error("Error en la API de divisas:", data.error.info);
       }
     })
-    .catch(error => console.error("Error al obtener divisas:", error));
+    .catch((error) => console.error("Error al obtener divisas:", error));
 }
-
-
 
 // Manejo de botones de selección
 document.addEventListener("DOMContentLoaded", function () {
