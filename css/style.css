@@ -31,7 +31,7 @@ section {
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -41,6 +41,7 @@ section {
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
+  z-index: 999;
 }
 
 .header__logo {
