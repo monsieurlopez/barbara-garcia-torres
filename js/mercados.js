@@ -32,7 +32,7 @@ function formatLargeNumber(number) {
 }
 
 // Número de criptomonedas a mostrar
-const limitCryptos = 15;
+const limitCryptos = 100;
 
 // Función para obtener criptomonedas
 function fetchCryptos() {
@@ -40,39 +40,64 @@ function fetchCryptos() {
     .then((response) => response.json())
     .then((result) => {
       const coins = result.data.coins;
-      const tableBody = document.getElementById("mercados__table-body");
-      tableBody.innerHTML = "";
 
-      const rows = coins.map((coin) => {
-        const changeClass =
-          coin.change >= 0
-            ? "mercados__table-change--positive"
-            : "mercados__table-change--negative";
-
-        return `
-          <tr class="mercados__table-row">
-            <td class="mercados__table-cell">
-              <img class="mercados__table-logo" src="${coin.iconUrl}" alt="${
-          coin.name
-        } logo">
-            </td>
-            <td class="mercados__table-cell">${coin.name}</td>
-            <td class="mercados__table-cell">${coin.symbol}</td>
-            <td class="mercados__table-cell">$${parseFloat(coin.price).toFixed(
-              2
-            )}</td>
-            <td class="mercados__table-cell ${changeClass}">${coin.change}%</td>
-            <td class="mercados__table-cell">$${formatLargeNumber(
-              coin.marketCap
-            )}</td>
-            <td class="mercados__table-cell">$${formatLargeNumber(
-              coin["24hVolume"]
-            )}</td>
-          </tr>
-        `;
-      });
-
-      tableBody.innerHTML = rows.join("");
+      // Inicializa Grid.js en el contenedor
+      new gridjs.Grid({
+        columns: [
+          { name: "Ranking", formatter: (cell) => `#${cell}` },
+          {
+            name: "Logo",
+            formatter: (_, row) =>
+              gridjs.html(`
+              <img src="${row.cells[1].data}" width="30" height="30" alt="Logo de ${row.cells[2].data}">
+            `),
+          },
+          "Nombre",
+          "Símbolo",
+          {
+            name: "Precio (USD)",
+            formatter: (cell) => `$${parseFloat(cell).toFixed(2)}`,
+          },
+          {
+            name: "Variación 24h",
+            formatter: (cell) =>
+              gridjs.html(
+                `<span style="color: ${
+                  cell >= 0 ? "green" : "red"
+                };">${cell}%</span>`
+              ),
+          },
+          {
+            name: "Capitalización (USD)",
+            formatter: (cell) => `$${formatLargeNumber(cell)}`,
+          },
+          {
+            name: "Volumen 24h (USD)",
+            formatter: (cell) => `$${formatLargeNumber(cell)}`,
+          },
+        ],
+        data: coins.map((coin) => [
+          coin.rank,
+          coin.iconUrl,
+          coin.name,
+          coin.symbol,
+          coin.price,
+          coin.change,
+          coin.marketCap,
+          coin["24hVolume"],
+        ]),
+        pagination: { limit: 15 },
+        sort: true,
+        search: true,
+        fixedHeader: true,
+        height: "30rem",
+        resizable: true,
+        style: {
+          table: { "font-size": "0.8rem" },
+          th: { "text-align": "center", 'color': '#000' },
+          td: { padding: "0.3rem", "text-align": "center" },
+        },
+      }).render(document.getElementById("mercados__grid"));
     })
     .catch((error) => console.error("Error al obtener criptomonedas:", error));
 }

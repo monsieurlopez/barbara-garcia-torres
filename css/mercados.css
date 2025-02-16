@@ -1,8 +1,11 @@
 /* ESTILOS CORRESPONDIENTES AL FICHERO mercados.html */
+.mercados__toggle {
+  margin: 0;
+  padding: 0;
+}
 .mercados__toggle-container {
   display: block;
   text-align: center;
-  margin-bottom: 1rem;
 }
 
 /* ESTILOS PARA LAS CRYPTOMONEDAS */
@@ -46,21 +49,6 @@
 
 .mercados__table-cell {
   padding: 1rem;
-}
-
-/* Estilos del logo */
-.mercados__table-logo {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-/* Cambia el color del porcentaje según sea positivo o negativo */
-.mercados__table-change--positive {
-  color: green;
-}
-
-.mercados__table-change--negative {
-  color: red;
 }
 
 /* ESTILOS PARA LAS DIVISAS */
