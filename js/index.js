@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ventajas: [
         "Principales criptomonedas y divisas",
         "Cotizaciones en tiempo real",
-        "Indicadores técnicos",
+        "Tablas personalizadas",
       ],
       url: "pages/mercados.html",
     },
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ventajas: [
         "Conversión en tiempo real",
         "Fácil de usar",
-        "Más de 50 monedas disponibles",
+        "30 monedas disponibles",
       ],
       url: "pages/conversor.html",
     },
