@@ -18,11 +18,13 @@
   </head>
   <body>
     <header class="header">
-      <img
-        class="header__logo"
-        src="../assets/icons-svg/Logo-incodecoin.svg"
-        alt="imagen de la empresa In Code Coin"
-      />
+      <a href="../index.html">
+        <img
+          class="header__logo"
+          src="../assets/icons-svg/Logo-incodecoin.svg"
+          alt="imagen de la empresa In Code Coin"
+        />
+      </a>
       <!-- Menú para pantallas grandes -->
       <nav class="header__nav">
         <ul class="header__menu">
@@ -76,7 +78,12 @@
             autocomplete="off"
             checked
           />
-          <label class="btn btn-sm btn-outline-secondary" for="mercados__toggle-crypto"> Cryptomonedas </label>
+          <label
+            class="btn btn-sm btn-outline-secondary"
+            for="mercados__toggle-crypto"
+          >
+            Cryptomonedas
+          </label>
 
           <input
             type="radio"
@@ -85,12 +92,19 @@
             id="mercados__toggle-divisas"
             autocomplete="off"
           />
-          <label class="btn btn-sm btn-outline-secondary" for="mercados__toggle-divisas"> Divisas </label>
+          <label
+            class="btn btn-sm btn-outline-secondary"
+            for="mercados__toggle-divisas"
+          >
+            Divisas
+          </label>
         </div>
         <!-- Fin del toggle -->
       </section>
       <section class="mercados__crypto">
-        <h2 class="mercados__title title__section">Cryptomonedas por Capitalización</h2>
+        <h2 class="mercados__title title__section">
+          Cryptomonedas por Capitalización
+        </h2>
         <div class="mercados__table-container">
           <table class="mercados__table">
             <thead class="mercados__table-head">
@@ -110,13 +124,15 @@
           </table>
         </div>
       </section>
-      <section id="mercados__divisas" class="mercados__section mercados__section--hidden">
-        <h2 class="mercados__title title__section">Tipos de Cambio </h2>
-        <p class="mercados__actualizacion" id="mercados__actualizacion"> </p>
-      
+      <section
+        id="mercados__divisas"
+        class="mercados__section mercados__section--hidden"
+      >
+        <h2 class="mercados__title title__section">Tipos de Cambio</h2>
+        <p class="mercados__actualizacion" id="mercados__actualizacion"></p>
+
         <!-- Contenedor flexible para las dos tablas -->
         <div class="mercados__divisas-container">
-          
           <!-- Tabla de tasas con base EUR -->
           <div class="mercados__divisas-table">
             <h3>EUR</h3>
@@ -132,7 +148,7 @@
               </tbody>
             </table>
           </div>
-      
+
           <!-- Tabla de tasas con base USD -->
           <div class="mercados__divisas-table">
             <h3>USD</h3>
@@ -148,10 +164,8 @@
               </tbody>
             </table>
           </div>
-      
         </div>
       </section>
-      
     </main>
 
     <footer class="footer">
