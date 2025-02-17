@@ -11,3 +11,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+/* Función que detecta cuando hay scroll en la página para modificar el estilo del footer */
+function ajustarFooter() {
+  const footer = document.querySelector(".footer");
+  const windowHeight = window.innerHeight;
+  const bodyHeight = document.body.offsetHeight;
+
+  if (bodyHeight <= windowHeight) {
+    footer.classList.add("footer__fixe"); // No hay scroll
+  } else {
+    footer.classList.remove("footer__fixe"); // Si hay scroll
+  }
+}
+
+// Ejecutar cuando la página cargue y al redimensionar la ventana
+window.addEventListener("load", ajustarFooter);
+window.addEventListener("resize", ajustarFooter);
+
+
