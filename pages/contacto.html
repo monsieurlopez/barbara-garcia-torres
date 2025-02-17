@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../css/contacto.css" />
     <!-- JS -->
     <script src="../js/app.js"></script>
+    <script src="../js/contacto.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -61,8 +62,70 @@
         <option value="aviso-legal.html">Aviso Legal</option>
       </select>
     </header>
-    <main></main>
-    <footer class="footer">
+    <main>
+      <section class="contacto">
+        <h2 class="contacto__titulo title__section">¿Quieres contactar con nosotros?</h2>
+        <p class="contacto__texto">Campos obligatorios <span class="contacto__obligatorio">*</span></p>
+        
+        <form class="contacto__formulario row g-3 needs-validation m-auto" novalidate>
+          <div class="col-md-6">
+            <label for="nombre" class="form-label">Nombre <span class="contacto__obligatorio">*</span></label>
+            <input type="text" class="form-control" id="nombre" required />
+            <div class="valid-feedback">¡Todo correcto!</div>
+            <div class="invalid-feedback">Por favor, introduce tu nombre.</div>
+          </div>
+      
+          <div class="col-md-6">
+            <label for="apellidos" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" id="apellidos" />
+          </div>
+      
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email <span class="contacto__obligatorio">*</span></label>
+            <div class="input-group has-validation">
+              <span class="input-group-text">@</span>
+              <input type="email" class="form-control" id="email" required />
+              <div class="valid-feedback">¡Todo correcto!</div>
+              <div class="invalid-feedback">Por favor, introduce un email válido.</div>
+            </div>
+          </div>
+      
+          <div class="col-md-6">
+            <label for="asunto" class="form-label">Asunto <span class="contacto__obligatorio">*</span></label>
+            <select class="form-select" id="asunto" required>
+              <option selected disabled value="">Selecciona una opción...</option>
+              <option value="informacion">Información</option>
+              <option value="colaboracion">Colaboración</option>
+              <option value="reclamacion">Reclamación</option>
+              <option value="sugerencia">Sugerencia</option>
+              <option value="otros">Otros</option>
+
+            </select>
+            <div class="invalid-feedback">Por favor, selecciona un asunto.</div>
+          </div>
+      
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" rows="3"></textarea>
+          </div>
+      
+          <div class="col-md-6 d-inline-block w-md-50 m-auto">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="terminos" required />
+              <label class="form-check-label" for="terminos">
+                Acepto los términos y condiciones <span class="contacto__obligatorio">*</span>
+              </label>
+              <div class="invalid-feedback">Debes aceptar los términos antes de enviar.</div>
+            </div>
+          </div>
+      
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Enviar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="footer footer__fixe">
       <p class="footer__text">
         &copy; 2025 In Code Coin - Todos los derechos reservados.
       </p>
