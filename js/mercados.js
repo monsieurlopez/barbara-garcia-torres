@@ -86,7 +86,7 @@ function fetchCryptos() {
           coin.marketCap,
           coin["24hVolume"],
         ]),
-        pagination: { limit: 15 },
+        pagination: { limit: 30 },
         sort: true,
         search: true,
         fixedHeader: true,
