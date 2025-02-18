@@ -30,7 +30,7 @@ El sitio está alojado en **GitHub Pages**.
 
 1. **Clonar el repositorio:**
    ```sh
-   git clone https://github.com/TU-ORGANIZACION/in-code-solutions.git
+   git clone https://github.com/IN-CODE-COIN/in-code-solutions.git
    ```
 2. **Abrir el archivo **index.html** en un navegador.**
 3. (Opcional) Usar una extensión como **Live Server** en VS Code para probar localmente.
