@@ -26,6 +26,7 @@ function fetchNews(theme) {
     .then((response) => response.json())
     .then((data) => {
       renderNews(data.articles.slice(0, numberNews)); // Solo las primeras ${numberNews} noticias
+      ajustarFooter();
     })
     .catch((error) => {
       console.error("Error al obtener noticias:", error);
