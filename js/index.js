@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const services = [
     {
       name: "Mercados",
-      img: "./assets/icons-svg/exchange_cash_currency_icon.svg",
+      img: "./assets/images/img-mercados.png",
       description:
         "Seguimiento continuo de las principales criptomonedas y divisas.",
       ventajas: [
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Conversor",
-      img: "./assets/icons-svg/calculator_regular_icon.svg",
+      img: "./assets/images/img-conversor.png",
       description:
         "Convierte entre diferentes divisas con tasas de cambio actualizadas.",
       ventajas: [
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "Noticias",
-      img: "./assets/icons-svg/paper_paper_press_icon.svg",
+      img: "./assets/images/img-noticias.png",
       description: "Mantente informado con las últimas noticias del mundo.",
       ventajas: [
         "Noticias actualizadas",
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
       (service) => `
     <div class="card" style="width: 18rem;">
       <div class="card__header">
-        <img src="${service.img}" class="card-img-top" alt="${service.name}">
+        <img src="${service.img}" class="img-fluid" alt="${service.name}">
       </div>
       <div class="card-body card__body">
         <h5 class="card-title"><strong>${service.name}</strong></h5>
