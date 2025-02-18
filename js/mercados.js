@@ -98,6 +98,7 @@ function fetchCryptos() {
           td: { padding: "0.3rem", "text-align": "center" },
         },
       }).render(document.getElementById("mercados__grid"));
+      ajustarFooter();
     })
     .catch((error) => console.error("Error al obtener criptomonedas:", error));
 }
@@ -157,6 +158,7 @@ function fetchDivisas() {
         });
 
         tableBody.innerHTML = rows.join("");
+        ajustarFooter();
       } else {
         console.error("Error en la API de divisas:", data.error.info);
       }
