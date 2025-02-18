@@ -93,14 +93,14 @@
           <div class="col-md-6">
             <label for="asunto" class="form-label">Asunto <span class="contacto__obligatorio">*</span></label>
             <select class="form-select" id="asunto" required>
-              <option selected disabled value="">Selecciona una opción...</option>
-              <option value="informacion">Información</option>
-              <option value="colaboracion">Colaboración</option>
-              <option value="reclamacion">Reclamación</option>
-              <option value="sugerencia">Sugerencia</option>
-              <option value="otros">Otros</option>
-
+              <option selected disabled value="" data-text="">Selecciona una opción...</option>
+              <option value="informacion" data-text="Información">Información</option>
+              <option value="colaboracion" data-text="Colaboración">Colaboración</option>
+              <option value="reclamacion" data-text="Reclamación">Reclamación</option>
+              <option value="sugerencia" data-text="Sugerencia">Sugerencia</option>
+              <option value="otros" data-text="Otros">Otros</option>
             </select>
+            <div class="valid-feedback">¡Todo correcto!</div>
             <div class="invalid-feedback">Por favor, selecciona un asunto.</div>
           </div>
       
@@ -115,12 +115,13 @@
               <label class="form-check-label" for="terminos">
                 Acepto los términos y condiciones <span class="contacto__obligatorio">*</span>
               </label>
+              <div class="valid-feedback">¡Todo correcto!</div>
               <div class="invalid-feedback">Debes aceptar los términos antes de enviar.</div>
             </div>
           </div>
       
           <div class="col-12">
-            <button class="btn btn-primary" type="submit">Enviar</button>
+            <button class="btn btn-primary btn-sm" type="submit">Enviar</button>
           </div>
         </form>
       </section>
