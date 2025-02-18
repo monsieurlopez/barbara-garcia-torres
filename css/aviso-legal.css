@@ -24,7 +24,7 @@ h3 {
 
 p {
     font-size: 1rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0rem;
 }
 
 .main__list {
@@ -58,6 +58,10 @@ p {
         justify-content: center;
         align-items: center;
         width: 100%;
+    }
+
+    .main__list-item {
+        flex-direction: column;
     }
 }
 
