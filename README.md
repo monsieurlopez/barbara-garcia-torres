@@ -2,12 +2,12 @@
 
 ## Descripción
 
-Este proyecto es un sitio web desarrollado con **HTML, CSS y JavaScript**, que incluye diferentes páginas:
+Este proyecto es un sitio web desarrollado con **HTML, CSS y Vanilla JavaScript**, que incluye diferentes páginas:
 
 - **Landing Page**
 - **Formulario de Contacto**
 - **Aviso Legal**
-- **mercados de Criptomonedas y Divisas**
+- **Mercados de Criptomonedas y Divisas**
 - **Noticias**
 - **Conversor de Monedas**
 
@@ -23,6 +23,7 @@ El sitio está alojado en **GitHub Pages**.
 │── /pages              # Otras páginas HTML
 │── index.html          # Página principal (Landing Page)
 │── .gitignore          # Archivos a ignorar en Git
+│── LICENSE             # Documentación de la licencia
 │── README.md           # Documentación del proyecto
 ```
 
