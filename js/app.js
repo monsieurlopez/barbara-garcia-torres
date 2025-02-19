@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
 function ajustarFooter() {
   const footer = document.querySelector(".footer");
   const windowHeight = window.innerHeight;
-  //const windowHeight = document.querySelector("main").clientHeight;
   const bodyHeight = document.body.offsetHeight;
 
   if (bodyHeight <= windowHeight) {

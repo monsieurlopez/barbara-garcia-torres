@@ -1,10 +1,10 @@
-const api_key_coinranking =
+const apiKeyCoinranking =
   "coinranking22b1d5f1ed17ba55bcd4a9c076747c62d4bca3520a85df31";
-const api_key_fx = "fxf_IbCpIl0sJD8z8xkkB25k";
+const apiKeyFx = "fxf_IbCpIl0sJD8z8xkkB25k";
 
 const options = {
   headers: {
-    "x-access-token": api_key_coinranking,
+    "x-access-token": apiKeyCoinranking,
   },
 };
 // Función para formatear la fecha en formato legible
@@ -117,7 +117,7 @@ function fetchDivisas() {
   const currenciesUSD = "EUR,GBP,CHF,JPY,CAD,AUD,HKD,MXN";
 
   fetch(
-    `https://api.fxfeed.io/v1/latest?base=${baseEur}&currencies=${currenciesEUR}&api_key=${api_key_fx}`
+    `https://api.fxfeed.io/v1/latest?base=${baseEur}&currencies=${currenciesEUR}&api_key=${apiKeyFx}`
   )
     .then((response) => response.json())
     .then((data) => {
@@ -146,7 +146,7 @@ function fetchDivisas() {
     .catch((error) => console.error("Error al obtener divisas:", error));
 
   fetch(
-    `https://api.fxfeed.io/v1/latest?base=${baseUsd}&currencies=${currenciesUSD}&api_key=${api_key_fx}`
+    `https://api.fxfeed.io/v1/latest?base=${baseUsd}&currencies=${currenciesUSD}&api_key=${apiKeyFx}`
   )
     .then((response) => response.json())
     .then((data) => {

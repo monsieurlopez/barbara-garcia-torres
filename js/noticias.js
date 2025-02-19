@@ -1,4 +1,4 @@
-const api_key_gnews = "465e9d4b6e7586b7fdf8239c40b72870";
+const apiKeyGnews = "465e9d4b6e7586b7fdf8239c40b72870";
 const searchInput = document.getElementById("news-search");
 const newsContainer = document.getElementById("news-container");
 let timeout = null;
@@ -18,7 +18,7 @@ searchInput.addEventListener("input", () => {
 //* Función que llama a la API para obtener las noticias *//
 function fetchNews(theme) {
   const language = "es" // "en" para el lenguaje inglés
-  const url = `https://gnews.io/api/v4/search?q=${theme}&lang=${language}&max=${numberNews}&apikey=${api_key_gnews}`;
+  const url = `https://gnews.io/api/v4/search?q=${theme}&lang=${language}&max=${numberNews}&apikey=${apiKeyGnews}`;
 
   fetch(
     `${url}`
