@@ -40,6 +40,10 @@ function fetchCryptos() {
     .then((response) => response.json())
     .then((result) => {
       const coins = result.data.coins;
+      const container = document.getElementById("mercados__grid");
+
+      // Limpiar el contenedor antes de renderizar una nueva tabla
+      container.innerHTML = "";
 
       // Inicializa Grid.js en el contenedor
       new gridjs.Grid({
@@ -90,15 +94,17 @@ function fetchCryptos() {
         sort: true,
         search: true,
         fixedHeader: true,
-        height: "30rem",
+        height: "40rem",
         resizable: true,
         style: {
           table: { "font-size": "0.8rem" },
-          th: { "text-align": "center", 'color': '#000' },
+          th: { "text-align": "center", color: "#000" },
           td: { padding: "0.3rem", "text-align": "center" },
         },
       }).render(document.getElementById("mercados__grid"));
-      ajustarFooter();
+    })
+    .then(() => {
+      document.querySelector("footer").classList.remove("footer__fixe");
     })
     .catch((error) => console.error("Error al obtener criptomonedas:", error));
 }
@@ -158,11 +164,14 @@ function fetchDivisas() {
         });
 
         tableBody.innerHTML = rows.join("");
-        ajustarFooter();
       } else {
         console.error("Error en la API de divisas:", data.error.info);
       }
     })
+    .then(() => {
+      ajustarFooter();
+    })
+
     .catch((error) => console.error("Error al obtener divisas:", error));
 }
 
@@ -178,12 +187,14 @@ document.addEventListener("DOMContentLoaded", function () {
       cryptoSection.classList.remove("mercados__section--hidden");
       divisasSection.classList.add("mercados__section--hidden");
       fetchCryptos();
+      ajustarFooter();
     });
 
     divisasBtn.addEventListener("change", () => {
       cryptoSection.classList.add("mercados__section--hidden");
       divisasSection.classList.remove("mercados__section--hidden");
       fetchDivisas();
+      ajustarFooter();
     });
   } else {
     console.error("Los botones de selección no se encontraron en el DOM.");

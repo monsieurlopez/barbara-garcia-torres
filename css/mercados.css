@@ -1,4 +1,8 @@
-/* ESTILOS CORRESPONDIENTES AL FICHERO mercados.html */
+/** ESTILOS CORRESPONDIENTES AL FICHERO mercados.html */
+/* <main> personalizado para evitar el scroll en la tabla de cryptos*/
+.mercados {
+  max-width: 75%;
+}
 .mercados__toggle {
   margin: 0;
   padding: 0;
@@ -11,7 +15,7 @@
 /* ESTILOS PARA LAS CRYPTOMONEDAS */
 .mercados__crypto {
   width: 100%;
-  max-width: 80rem;
+  max-width: 85rem;
   margin: 0 auto;
 }
 
@@ -86,6 +90,10 @@
 
 /* Diseño responsivo */
 @media (max-width: 1000px) {
+  .mercados {
+    max-width: 98%;
+  }
+
   .mercados__divisas-container {
     flex-direction: column;
     align-items: center;
