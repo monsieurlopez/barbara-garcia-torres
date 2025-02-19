@@ -25,6 +25,10 @@
   min-height: 6rem;
 }
 
+.card__footer-link {
+  text-decoration: none;
+}
+
 /* Sobre Nosotros */
 .about__content {
   display: flex;
