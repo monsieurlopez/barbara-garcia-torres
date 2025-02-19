@@ -2,7 +2,7 @@ const apiKeyGnews = "465e9d4b6e7586b7fdf8239c40b72870";
 const searchInput = document.getElementById("news-search");
 const newsContainer = document.getElementById("news-container");
 let timeout = null;
-const numberNews = 10;
+let numberNews;
 
 //* 2s after introduce input letre *//
 searchInput.addEventListener("input", () => {
@@ -16,7 +16,7 @@ searchInput.addEventListener("input", () => {
 });
 
 //* Función que llama a la API para obtener las noticias *//
-function fetchNews(theme) {
+function fetchNews(theme, numberNews = 10) {
   const language = "es"; // "en" para el lenguaje inglés
   const url = `https://gnews.io/api/v4/search?q=${theme}&lang=${language}&max=${numberNews}&apikey=${apiKeyGnews}`;
 
@@ -24,7 +24,6 @@ function fetchNews(theme) {
     .then((response) => response.json())
     .then((data) => {
       renderNews(data.articles.slice(0, numberNews)); // Solo las primeras ${numberNews} noticias
-      ajustarFooter();
     })
     .catch((error) => {
       console.error("Error al obtener noticias:", error);
@@ -64,5 +63,10 @@ function renderNews(articles) {
       `;
 
     newsContainer.appendChild(newCard);
+    document.querySelector("footer").classList.remove("footer__fixe");
   });
 }
+
+/* Llamamos a la función para mostrar por defecto 3 noticias */
+const themeDefault = "Criptomonedas";
+fetchNews(themeDefault, 6); //* Theme = "Criptomonedas" || Límite de noticias = 6 *//
