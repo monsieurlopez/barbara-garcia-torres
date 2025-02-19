@@ -97,8 +97,8 @@ function fetchCryptos() {
         height: "40rem",
         resizable: true,
         style: {
-          table: { "font-size": "0.8rem" },
-          th: { "text-align": "center", color: "#000" },
+          table: { "font-size": "0.8rem", "table-layout": "auto" },
+          th: { "text-align": "center", "color": "#000" },
           td: { padding: "0.3rem", "text-align": "center" },
         },
       }).render(document.getElementById("mercados__grid"));
