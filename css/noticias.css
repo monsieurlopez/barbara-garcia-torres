@@ -61,6 +61,10 @@
   text-decoration: underline;
 }
 
+.element__list-source {
+  font-size: 0.7rem;
+}
+
 @media (max-width: 1000px) {
   .news__search-input {
     width: 60%;

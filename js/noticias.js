@@ -17,12 +17,10 @@ searchInput.addEventListener("input", () => {
 
 //* Función que llama a la API para obtener las noticias *//
 function fetchNews(theme) {
-  const language = "es" // "en" para el lenguaje inglés
+  const language = "es"; // "en" para el lenguaje inglés
   const url = `https://gnews.io/api/v4/search?q=${theme}&lang=${language}&max=${numberNews}&apikey=${apiKeyGnews}`;
 
-  fetch(
-    `${url}`
-  )
+  fetch(`${url}`)
     .then((response) => response.json())
     .then((data) => {
       renderNews(data.articles.slice(0, numberNews)); // Solo las primeras ${numberNews} noticias
@@ -37,29 +35,34 @@ function fetchNews(theme) {
 function renderNews(articles) {
   newsContainer.innerHTML = "";
 
-  articles.slice(0, numberNews).forEach(article => { // Solo las primeras ${numberNews} noticias
-      const { title, description, url, image, author, source, publishedAt } = article;
+  articles.slice(0, numberNews).forEach((article) => {
+    // Solo las primeras ${numberNews} noticias
+    const { title, description, url, image, author, source, publishedAt } =
+      article;
 
-      const newCard = document.createElement("div");
-      newCard.classList.add("card");
+    const newCard = document.createElement("div");
+    newCard.classList.add("card");
 
-      //Estructure card bootstrap
-      newCard.innerHTML = `
-          <img src="${image} || '../assets/no-image.jpg'}" class="card-img-top" alt="${title}">
+    //Estructure card bootstrap
+    newCard.innerHTML = `
+          <img src="${image}" class="card-img-top" alt="${title}">
           <div class="card-body">
               <h5 class="card-title">${title}</h5>
               <p class="card-text">${description}</p>
               <a href="${url}" target="_blank" class="card-link">Ir a la noticia</a>
           </div>
           <ul class="list-group list-group-flush">
-              <li class="list-group-item text-truncate"><strong>Autor:</strong> ${author || "Desconocido"}</li>
-              <li class="list-group-item"><strong>Fuente:</strong> ${source.name || "Desconocida"}</li>
-              <li class="list-group-item"><strong>Fecha:</strong> ${new Date(publishedAt).toLocaleDateString() || "Desconocida"}</li>
+                        <li class="list-group-item"><strong>Fecha:</strong> ${
+                          new Date(publishedAt).toLocaleDateString() ||
+                          "Desconocida"
+                        }</li>
+
+              <li class="list-group-item element__list element__list-source"><strong>Fuente:</strong> ${
+                source.name || "Desconocida"
+              }</li>
           </ul>
       `;
 
-      newsContainer.appendChild(newCard);
+    newsContainer.appendChild(newCard);
   });
 }
-
-
