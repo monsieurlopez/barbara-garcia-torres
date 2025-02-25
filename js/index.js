@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "Ateliers Allaitement",
       img: "./assets/images/img-allaitement.png",
       description:
-        "Seguimiento continuo de las principales criptomonedas y divisas.",
+        "Organisation d'ateliers à Cambo-les-Bains (64)",
       ventajas: [
-        "Principales criptomonedas y divisas",
-        "Cotizaciones en tiempo real",
-        "Tablas personalizadas",
+        "Conseils d'autres mamans et papas",
+        "Gratuits",
+        "Groupes réduits",
       ],
       url: "",
     },
@@ -16,11 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "Kinésithérapie",
       img: "./assets/images/img-kine.png",
       description:
-        "Convierte entre diferentes divisas con tasas de cambio actualizadas.",
+        "Séances de kiné à Hélette (64)",
       ventajas: [
-        "Conversión en tiempo real",
-        "Fácil de usar",
-        "30 monedas disponibles",
+        "Nouveaux-nés et enfants",
+        "Adultes",
+        "Gynécologiques ",
       ],
       url: "",
     },
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   servicesContainer.innerHTML = services
     .map(
       (service) => `
-    <div class="card" style="width: 18rem;">
+    <div class="card">
       <div class="card__header">
         <img src="${service.img}" class="card-img-top" alt="${service.name}">
       </div>
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
           .join("")}
       </ul>
       <div class="card-footer card__footer">
-        <a href="${service.url}" class="card__footer-link"> Ver más </a>
+        <a href="${service.url}" class="card__footer-link"> Voir plus </a>
       </div>
     </div>
   `
