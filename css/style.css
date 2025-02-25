@@ -15,12 +15,11 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: auto;
-    color: #333;
+    color: #010305;
     background-image: url(../assets/images/fondo-web-1.png);
 }
 
 main {
-    /*background: #fff;*/
     border-radius: 0.5rem;
     max-width: 70%;
     margin: 5rem auto auto auto;
@@ -38,7 +37,7 @@ section {
   left: 0;
   width: 100%;
   height: 5rem;
-  background-color: whitesmoke;
+  background-color: #FAEFDC;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -71,20 +70,20 @@ section {
 
 .header__menu-item {
   display: inline-block;
-  color: #0B172F;
+  color: #010305;
 
 }
 
 .header__menu-link {
   text-decoration: none;
   font-weight: bold;
-  color: #0B172F;
+  color: #010305;
   font-size: 1rem;
   transition: color 0.3s ease;
 }
 
 .header__menu-link:hover {
-  text-decoration: underline black;
+  text-decoration: underline #010305;
   transition: color 0.3s ease;
 }
 
@@ -92,8 +91,8 @@ footer {
   text-align: center;
   margin-top: 2rem;
   padding: 1.5rem;
-  background: whitesmoke;
-  color: #0B172F;
+  background: #FAEFDC;
+  color: #010305;
   align-items: center;
 }
 
@@ -117,7 +116,6 @@ footer {
 
 @media (max-width: 1000px) {
     main {
-        background: #fff;
         border-radius: 0.5rem;
         max-width: 100%;
         margin: 5rem auto auto auto;

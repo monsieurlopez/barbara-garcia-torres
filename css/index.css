@@ -1,4 +1,7 @@
 /** ESTILOS CORRESPONDIENTES AL FICHERO index.html **/
+.hero img {
+  width: 28rem;
+}
 
 /* Servicios */
 .services__title {
