@@ -7,26 +7,26 @@ const generateMessage = (objeto) => {
   modal.id = "message-response";
   modal.innerHTML = `
       <span type="button" class="close-btn" aria-label="Close"> &times;</span>
-      <h2> ¡Hemos recibido tu mensaje! ✉️ </h2>
-      <p> Gracias por contactar con nosotros, te responderemos lo antes posible. </p>
-      <h4> Resumen de tu mensaje: </h4>
+      <h2> Le message a été envoyé! ✉️ </h2>
+      <p> Merci de m'avoir contactée, je vous répondrai dans les plus brefs délais. </p>
+      <h4> Récapitulatif de votre message : </h4>
       <ul>
-        <li><strong>Nombre:</strong> ${objeto.nombre}</li>
+        <li><strong>Prenom:</strong> ${objeto.nombre}</li>
         ${
           objeto.apellidos
-            ? `<li><strong>Apellido(s):</strong> ${objeto.apellidos}</li>`
+            ? `<li><strong>Nom de famille:</strong> ${objeto.apellidos}</li>`
             : ""
         }
         <li><strong>Email:</strong> ${objeto.email}</li>
-        <li><strong>Asunto:</strong> ${objeto.asunto}</li>
+        <li><strong>Sujet:</strong> ${objeto.asunto}</li>
         ${
           objeto.mensaje
-            ? `<li><strong>Mensaje:</strong> </li>
+            ? `<li><strong>Message:</strong> </li>
           <li> ${objeto.mensaje}</li>`
             : ""
         }
       </ul>
-      <button type="button" class="btn btn-sm btn-danger mt-3">Cerrar</button>
+      <button type="button" class="btn btn-sm btn-danger mt-3">Fermer</button>
     `;
 
   document.body.appendChild(modal);
@@ -63,7 +63,7 @@ const generateMessage = (objeto) => {
       const elementos = Array.from(form.elements)
         .filter((elemento) => elemento.type !== "submit")
         .reduce((obj, elemento) => {
-          if (elemento.tagName === "SELECT" && elemento.id === "asunto") {
+          if (elemento.tagName === "SELECT" && elemento.id === "sujet") {
             // Obtener el data-text en lugar del value
             obj[elemento.id] =
               elemento.selectedOptions[0].getAttribute("data-text");
