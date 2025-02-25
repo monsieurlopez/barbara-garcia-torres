@@ -77,9 +77,29 @@ const generateMessage = (objeto) => {
         event.stopPropagation();
       } else {
         generateMessage(elementos);
+        sendEmail(elementos);
       }
 
       form.classList.add("was-validated");
     });
   });
 })();
+
+//* Función para enviar el correo con EmailJS */
+// Configurar EmailJS con tu Public Key
+const publicKey = "gbtOYXQ6SZQAOaHko";
+const serviceId = "service_i3vng1m";
+const templateId = "template_cepy6gg";
+emailjs.init(publicKey);
+
+const sendEmail = (datos) => {
+  let prenom = datos.nombre;
+  let nom = datos.apellidos || "";
+  emailjs.send(serviceId, templateId, {
+    from_name: `${prenom} ${nom}`,
+    user_email: datos.email,
+    subject: datos.asunto,
+    message: datos.mensaje || "Sans message",
+  })
+  .catch((error) => console.error("Error al enviar el email:", error));
+};
