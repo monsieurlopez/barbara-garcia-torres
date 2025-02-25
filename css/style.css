@@ -92,8 +92,8 @@ footer {
   text-align: center;
   margin-top: 2rem;
   padding: 1.5rem;
-  /*background: #0B172F;*/
-  color: white;
+  background: whitesmoke;
+  color: #0B172F;
   align-items: center;
 }
 
