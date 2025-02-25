@@ -1,8 +1,8 @@
 /** ESTILOS CORRESPONDIENTES AL FICHERO aviso-legal.html */
 h2 {
     font-size: 1.8rem;
-    color: #0B172F;
-    border-bottom: 0.2rem solid #0B172F;
+    color: #010305;
+    border-bottom: 0.2rem solid #010305;
     padding-bottom: 1rem;
     margin-top: 0.8rem;
 }
@@ -10,14 +10,12 @@ h2 {
 h3 {
     font-size: 1.4rem;
     font-weight: 500;
-    color: #0B172F;
+    color: #010305;
 }
 
 .main__section {
-    background: white;
     padding: 2rem;
     border-radius: 0.5rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 1.5rem;
     text-align: center;
 }
@@ -33,7 +31,7 @@ p {
 }
 
 .main__list-item {
-    background: #f4f4f4;
+    background: #FAEFDC;
     padding: 0.7rem;
     margin: 0.5rem auto;
     border-radius: 0.5rem;
@@ -44,13 +42,13 @@ p {
 }
 
 .main__list-item strong {
-    color: #0056b3;
+    color: #010305;
     margin-right: 1rem;
 }
 
 @media (max-width: 1000px) {
     .main__list-item {
-        background: #f4f4f4;
+        background: #FAEFDC;
         padding: 0.7rem;
         margin: 0.5rem 0;
         border-radius: 0.5rem;
