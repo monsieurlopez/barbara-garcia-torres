@@ -22,7 +22,7 @@
         <img
           class="header__logo"
           src="../assets/icons-svg/logo-barbara.svg"
-          alt="imagen de la empresa In Code Coin"
+          alt="imagen del logo de Bárbara García Torres"
         />
       </a>
       <!-- Menú para pantallas grandes -->
@@ -31,14 +31,14 @@
           <li class="header__menu-item">
             <a class="header__menu-link" href="../index.html">Accueil</a>
           </li>
-          
-          
-          
+
           <li class="header__menu-item">
             <a class="header__menu-link" href="contacto.html">Contact</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="aviso-legal.html">Mentions légales</a>
+            <a class="header__menu-link" href="aviso-legal.html"
+              >Mentions légales</a
+            >
           </li>
         </ul>
       </nav>
@@ -56,10 +56,10 @@
     <main>
       <section class="contacto">
         <h1 class="contacto__titulo title__section">
-          ¿Quieres contactar con nosotros?
+          Voulez-vous me contacter ?
         </h1>
         <p class="contacto__texto">
-          Campos obligatorios <span class="contacto__obligatorio">*</span>
+          Champs obligatoires <span class="contacto__obligatorio">*</span>
         </p>
 
         <form
@@ -68,15 +68,15 @@
         >
           <div class="col-md-6">
             <label for="nombre" class="form-label"
-              >Nombre <span class="contacto__obligatorio">*</span></label
+              >Prénom <span class="contacto__obligatorio">*</span></label
             >
             <input type="text" class="form-control" id="nombre" required />
-            <div class="valid-feedback">¡Todo correcto!</div>
-            <div class="invalid-feedback">Por favor, introduce tu nombre.</div>
+            <div class="valid-feedback">Tout est correct !</div>
+            <div class="invalid-feedback">Veuillez entrer votre prénom.</div>
           </div>
 
           <div class="col-md-6">
-            <label for="apellidos" class="form-label">Apellidos</label>
+            <label for="apellidos" class="form-label">Nom de famille</label>
             <input type="text" class="form-control" id="apellidos" />
           </div>
 
@@ -87,41 +87,38 @@
             <div class="input-group has-validation">
               <span class="input-group-text">@</span>
               <input type="email" class="form-control" id="email" required />
-              <div class="valid-feedback">¡Todo correcto!</div>
+              <div class="valid-feedback">Tout est correct !</div>
               <div class="invalid-feedback">
-                Por favor, introduce un email válido.
+                Veuillez entrer un email valide.
               </div>
             </div>
           </div>
 
           <div class="col-md-6">
             <label for="asunto" class="form-label"
-              >Asunto <span class="contacto__obligatorio">*</span></label
+              >Sujet <span class="contacto__obligatorio">*</span></label
             >
             <select class="form-select text-center" id="asunto" required>
               <option selected disabled value="" data-text="">
-                Selecciona una opción...
+                Sélectionnez une option...
               </option>
-              <option value="informacion" data-text="Información">
-                Información
+              <option value="information" data-text="Information">
+                Information
               </option>
-              <option value="colaboracion" data-text="Colaboración">
-                Colaboración
+              <option value="atelliers" data-text="Atelliers">
+                Atelliers
               </option>
-              <option value="reclamacion" data-text="Reclamación">
-                Reclamación
+              <option value="suggestion" data-text="Suggestion">
+                Suggestion
               </option>
-              <option value="sugerencia" data-text="Sugerencia">
-                Sugerencia
-              </option>
-              <option value="otros" data-text="Otros">Otros</option>
+              <option value="autres" data-text="Autres">Autres</option>
             </select>
-            <div class="valid-feedback">¡Todo correcto!</div>
-            <div class="invalid-feedback">Por favor, selecciona un asunto.</div>
+            <div class="valid-feedback">Tout est correct !</div>
+            <div class="invalid-feedback">Veuillez sélectionner un sujet.</div>
           </div>
 
           <div class="mb-3">
-            <label for="mensaje" class="form-label">Mensaje</label>
+            <label for="mensaje" class="form-label">Message</label>
             <textarea class="form-control" id="mensaje" rows="3"></textarea>
           </div>
 
@@ -134,18 +131,18 @@
                 required
               />
               <label class="form-check-label" for="terminos">
-                Acepto los términos y condiciones
+                J'accepte les termes et conditions
                 <span class="contacto__obligatorio">*</span>
               </label>
-              <div class="valid-feedback">¡Todo correcto!</div>
+              <div class="valid-feedback">Tout est correct !</div>
               <div class="invalid-feedback">
-                Debes aceptar los términos antes de enviar.
+                Vous devez accepter les termes avant d'envoyer.
               </div>
             </div>
           </div>
 
           <div class="col-12">
-            <button class="btn btn-primary btn-sm" type="submit">Enviar</button>
+            <button class="btn btn-primary btn-sm" type="submit">Envoyer</button>
           </div>
         </form>
       </section>
