@@ -1,4 +1,8 @@
 //* Funciones globales **/
+
+//* Import Vercel Analytics */
+import { inject } from "@vercel/analytics";
+inject();
 document.addEventListener("DOMContentLoaded", function () {
   const menuSmallScreen = document.getElementById("mobile-menu");
 
