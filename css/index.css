@@ -70,6 +70,12 @@
   border-radius: 1rem;
 }
 
+@media (max-width: 576px) {
+  .hero img {
+    padding: 2rem 0;
+  }
+}
+
 
 
 
