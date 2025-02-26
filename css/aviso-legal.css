@@ -1,8 +1,8 @@
 /** ESTILOS CORRESPONDIENTES AL FICHERO aviso-legal.html */
 h2 {
     font-size: 1.8rem;
-    color: #010305;
-    border-bottom: 0.2rem solid #010305;
+    color: #1D0029;
+    border-bottom: 0.2rem solid #1D0029;
     padding-bottom: 1rem;
     margin-top: 0.8rem;
 }
@@ -10,7 +10,7 @@ h2 {
 h3 {
     font-size: 1.4rem;
     font-weight: 500;
-    color: #010305;
+    color: #1D0029;
 }
 
 .main__section {
@@ -42,7 +42,7 @@ p {
 }
 
 .main__list-item strong {
-    color: #010305;
+    color: #1D0029;
     margin-right: 1rem;
 }
 

@@ -15,7 +15,6 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: auto;
-    color: #010305;
     background-image: url(../assets/images/fondo-web-1.png);
 }
 
@@ -70,20 +69,19 @@ section {
 
 .header__menu-item {
   display: inline-block;
-  color: #010305;
-
+  color: #1D0029;
 }
 
 .header__menu-link {
   text-decoration: none;
   font-weight: bold;
-  color: #010305;
+  color: #1D0029;
   font-size: 1rem;
   transition: color 0.3s ease;
 }
 
 .header__menu-link:hover {
-  text-decoration: underline #010305;
+  text-decoration: underline #1D0029;
   transition: color 0.3s ease;
 }
 
@@ -92,7 +90,7 @@ footer {
   margin-top: 2rem;
   padding: 1.5rem;
   background: #FAEFDC;
-  color: #010305;
+  color: #1D0029;
   align-items: center;
 }
 
@@ -105,6 +103,7 @@ footer {
   font-weight: bold;
   margin-bottom: 1.25rem;
   text-align: center;
+  color: #1D0029;
 }
 
 /* Estilo para el footer cuando no haya scroll */
