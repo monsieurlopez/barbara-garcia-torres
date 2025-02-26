@@ -1,8 +1,5 @@
 //* Funciones globales **/
 
-//* Import Vercel Analytics */
-import { inject } from "@vercel/analytics";
-inject();
 document.addEventListener("DOMContentLoaded", function () {
   const menuSmallScreen = document.getElementById("mobile-menu");
 
@@ -31,5 +28,9 @@ function ajustarFooter() {
 // Ejecutar cuando la página cargue y al redimensionar la ventana
 window.addEventListener("load", ajustarFooter);
 window.addEventListener("resize", ajustarFooter);
+
+//* Import Vercel Analytics */
+VercelAnalytics.inject();
+
 
 
