@@ -29,8 +29,6 @@ function ajustarFooter() {
 window.addEventListener("load", ajustarFooter);
 window.addEventListener("resize", ajustarFooter);
 
-//* Import Vercel Analytics */
-//VercelAnalytics.inject();
 
 
 
