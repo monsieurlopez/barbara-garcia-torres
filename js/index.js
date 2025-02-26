@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Adultes",
         "Gynécologiques ",
       ],
-      url: "",
+      url: "pages/soins.html",
     },
   ];
 
