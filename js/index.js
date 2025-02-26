@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
   const services = [
     {
-      name: "Ateliers Allaitement",
+      name: "Consultante en allaitement",
       img: "./assets/images/img-allaitement.png",
       description:
-        "Organisation d'ateliers à Cambo-les-Bains (64)",
+        "",
       ventajas: [
         "Conseils d'autres mamans et papas",
         "Gratuits",
         "Groupes réduits",
       ],
-      url: "",
+      url: "pages/lactancia.html",
     },
     {
-      name: "Kinésithérapie",
+      name: "Soin en kinésithérapie",
       img: "./assets/images/img-kine.png",
       description:
-        "Séances de kiné à Hélette (64)",
+        "",
       ventajas: [
         "Nouveaux-nés et enfants",
         "Adultes",
@@ -38,12 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="card-body card__body">
         <h5 class="card-title"><strong>${service.name}</strong></h5>
         <p class="card-text">${service.description}</p>
-      </div>
-      <ul class="list-group list-group-flush">
+        <ul class="list-group list-group-flush">
         ${service.ventajas
           .map((ventaja) => `<li class="list-group-item">${ventaja}</li>`)
           .join("")}
       </ul>
+      </div>
       <div class="card-footer card__footer">
         <a href="${service.url}" class="card__footer-link"> Voir plus </a>
       </div>
