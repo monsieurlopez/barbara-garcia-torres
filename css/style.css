@@ -12,18 +12,18 @@ ul {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: auto;
-    background-image: url(../assets/images/fondo-web-1.png);
-    /*background-color: #FAEFDC;*/
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: auto;
+  background-image: url(../assets/images/fondo-web-1.png);
+  /*background-color: #FAEFDC;*/
 }
 
 main {
-    border-radius: 0.5rem;
-    max-width: 70%;
-    margin: 5rem auto auto auto;
-    padding: 2rem;
+  border-radius: 0.5rem;
+  max-width: 70%;
+  margin: 5rem auto auto auto;
+  padding: 2rem;
 }
 
 section {
@@ -38,7 +38,7 @@ section {
   width: 100%;
   height: 5rem;
   /*background-image: url(../assets/images/fondo-web-1.png);*/
-  background-color: #FAEFDC;
+  background-color: #faefdc;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -71,19 +71,19 @@ section {
 
 .header__menu-item {
   display: inline-block;
-  color: #1D0029;
+  color: #1d0029;
 }
 
 .header__menu-link {
   text-decoration: none;
   font-weight: bold;
-  color: #1D0029;
+  color: #1d0029;
   font-size: 1rem;
   transition: color 0.3s ease;
 }
 
 .header__menu-link:hover {
-  text-decoration: underline #1D0029;
+  text-decoration: underline #1d0029;
   transition: color 0.3s ease;
 }
 
@@ -92,21 +92,33 @@ footer {
   margin-top: 2rem;
   padding: 1.5rem;
   /*background-image: url(../assets/images/fondo-web-1.png);*/
-  background-color: #FAEFDC;
-  color: #1D0029;
+  background-color: #faefdc;
+  color: #1d0029;
   align-items: center;
+}
+
+.footer__contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer__contact img {
+  width: 1.5rem;
 }
 
 .footer__text {
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 .title__section {
   font-weight: bold;
   margin-bottom: 1.25rem;
   text-align: center;
-  color: #1D0029;
+  color: #1d0029;
 }
 
 /* Estilo para el footer cuando no haya scroll */
@@ -117,13 +129,13 @@ footer {
 }
 
 @media (max-width: 1000px) {
-    main {
-        border-radius: 0.5rem;
-        max-width: 100%;
-        margin: 5rem auto auto auto;
-        padding: 2rem 0.1rem;
-        text-align: center;
-    }
+  main {
+    border-radius: 0.5rem;
+    max-width: 100%;
+    margin: 5rem auto auto auto;
+    padding: 2rem 0.1rem;
+    text-align: center;
+  }
   .header__nav {
     display: none;
   }
@@ -131,5 +143,9 @@ footer {
   .header__select {
     display: block;
     width: 10rem;
+  }
+
+  .footer__contact {
+    display: block;
   }
 }
