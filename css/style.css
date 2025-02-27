@@ -109,9 +109,14 @@ footer {
   width: 1.5rem;
 }
 
-.footer__text {
+.footer__legal {
   margin: 0;
   padding: 0;
+}
+
+.footer__legal a {
+  text-decoration: none;
+  color: black;
 }
 
 .title__section {
