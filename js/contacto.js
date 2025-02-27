@@ -86,10 +86,10 @@ const generateMessage = (objeto) => {
 })();
 
 //* Función para enviar el correo con EmailJS */
-// Configurar EmailJS con tu Public Key
-const publicKey = "gbtOYXQ6SZQAOaHko";
-const serviceId = "service_i3vng1m";
-const templateId = "template_cepy6gg";
+// Configurar EmailJS
+const publicKey = "3a1KJ0W1S0vOpCRjW";
+const serviceId = "service_ib1fs2u";
+const templateId = "template_znhf7wk";
 emailjs.init(publicKey);
 
 const sendEmail = (datos) => {
