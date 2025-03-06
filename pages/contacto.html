@@ -95,7 +95,7 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/contacto.css" />
     <!-- JS -->
-    <script src="../js/app.js"></script>
+    <script src="../js/app.js" defer></script>
     <script src="../js/contacto.js" defer></script>
     <!-- EmailJs -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -132,17 +132,16 @@
         </ul>
       </nav>
 
-      <!-- Select para pantallas pequeñas -->
-      <select
-        class="header__select form-select form-select-sm"
-        id="mobile-menu"
-      >
-        <option value="../index.html">Accueil</option>
-        <option value="lactancia.html">Allaitement</option>
-        <option value="soins.html">Kinésithérapie</option>
-        <option value="contacto.html" selected>Contact</option>
-        <option value="aviso-legal.html">Mentions légales</option>
-      </select>
+      <img
+        class="header__offcanvas-btn"
+        type="button"
+        src="../assets/icons-svg/menu-icon.svg"
+        alt="Button menu"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#headerOffcanvasContacto"
+        aria-controls="headerOffcanvasContacto"
+      />
+      <!-- Offcanvas para móviles -->
     </header>
     <main>
       <section class="contacto">
@@ -275,5 +274,6 @@
         };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

@@ -51,9 +51,8 @@ section {
   height: 4rem;
 }
 
-.header__select {
+.header__offcanvas-btn {
   display: none;
-  text-align: center;
 }
 
 .header__nav {
@@ -92,7 +91,6 @@ footer {
   text-align: center;
   margin-top: 2rem;
   padding: 1.5rem;
-  /*background-image: url(../assets/images/fondo-web-1.png);*/
   background-color: #faefdc;
   color: #1d0029;
   align-items: center;
@@ -146,12 +144,64 @@ footer {
     display: none;
   }
 
-  .header__select {
+  .header__offcanvas-btn {
     display: block;
-    width: 10rem;
+    width: 2rem;
   }
 
   .footer__contact {
     display: block;
   }
+}
+
+/** Estilos CSS OffCanvas **/
+.header__offcanvas {
+  background-color: #faefdc;
+  width: 75%;
+  max-width: 300px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 576px) {
+  .header__offcanvas {
+    max-width: 60%;
+  }
+}
+
+/* Estilos del header dentro del offcanvas */
+.header__offcanvas .offcanvas-header {
+  background-color: #F4D5D3;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  color: #1D0029;
+}
+
+/* Estilos del menú dentro del offcanvas */
+.header__menuOff {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header__menuOff-item {
+  border-bottom: 1px solid #eee;
+}
+
+.header__menuOff-link {
+  display: block;
+  padding: 12px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+.header__menuOff-link:hover {
+  background-color: #F4D5D3;
+  color: #1D0029;
+}
+
+/* Espaciado interno del offcanvas */
+.offcanvas-body {
+  padding: 20px;
 }
