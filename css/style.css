@@ -158,7 +158,7 @@ footer {
 .header__offcanvas {
   background-color: #faefdc;
   width: 75%;
-  max-width: 300px;
+  max-width: 25rem;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -171,8 +171,7 @@ footer {
 /* Estilos del header dentro del offcanvas */
 .header__offcanvas .offcanvas-header {
   background-color: #F4D5D3;
-  padding: 15px;
-  border-bottom: 1px solid #ddd;
+  padding: 1rem;
   color: #1D0029;
 }
 
@@ -183,25 +182,23 @@ footer {
   margin: 0;
 }
 
-.header__menuOff-item {
-  border-bottom: 1px solid #eee;
-}
-
 .header__menuOff-link {
   display: block;
   padding: 12px 20px;
   font-size: 1rem;
   text-decoration: none;
-  color: #333;
+  color: #1D0029;
   transition: background 0.3s, color 0.3s;
+  border-radius: 0.5rem;
 }
 
 .header__menuOff-link:hover {
   background-color: #F4D5D3;
   color: #1D0029;
+  font-weight: bold;
 }
 
 /* Espaciado interno del offcanvas */
 .offcanvas-body {
-  padding: 20px;
+  padding: 1rem;
 }

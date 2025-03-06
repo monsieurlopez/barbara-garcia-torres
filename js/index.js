@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   const services = [
     {
-      name: "Consultante en allaitement",
+      name: "Consultante en allaitement IBCLC",
       img: "./assets/images/img-allaitement.png",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description: "Je propose un accompagnement  individuel à domicile ou au cabinet.",
       url: "pages/lactancia.html",
     },
     {
       name: "Soin en kinésithérapie",
       img: "./assets/images/img-kine.png",
-      description: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
+      description: "Spécialisée dans la prise en charge de la femme et de l'enfant.",
       url: "pages/soins.html",
     },
   ];

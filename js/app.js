@@ -13,7 +13,7 @@ const createCanvasOff = (page) => {
           data-bs-scroll="true"
         >
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="headerOffcanvas${page}Label">Menu</h5>
+            <h4 class="offcanvas-title" id="headerOffcanvas${page}Label">Menu</h4>
             <button
               type="button"
               class="btn-close"
