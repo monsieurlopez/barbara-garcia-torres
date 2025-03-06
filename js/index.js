@@ -24,11 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <img src="${service.img}" class="card-img-top" alt="${service.name}">
       </div>
       <div class="card-body card__body">
-        <h5 class="card-title"><strong>${service.name}</strong></h5>
-        <p class="card-text">${service.description}</p>
-      </div>
-      <div class="card-footer card__footer">
-        <a href="${service.url}" class="card__footer-link"> Voir plus </a>
+        <h5 class="card__body-title card-title"><strong>${service.name}</strong></h5>
+        <p class="card__body-text card-text">${service.description}</p>
+        <a href="${service.url}" class="card__body-link"> Voir plus </a>
       </div>
     </div>
   `

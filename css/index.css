@@ -34,7 +34,7 @@
   min-height: 6rem;
 }
 
-.card__footer-link {
+.card__body-link {
   text-decoration: none;
 }
 
@@ -45,18 +45,20 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  max-width: 50rem;
+  max-width: 60rem;
   margin: 1rem auto;
 }
 
 .about__text {
   flex: 1;
-  max-width: 25rem;
+  max-width: 30rem;
+  text-align: justify;
+  padding: 1rem;
 }
 
 .about__description {
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.5rem;
 }
 
 .about__image-container {
@@ -68,6 +70,12 @@
 .about__image {
   max-width: 22rem;
   border-radius: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .about__content {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 576px) {
