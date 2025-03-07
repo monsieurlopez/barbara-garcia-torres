@@ -1,11 +1,24 @@
 //* Funciones globales **/
 const createCanvasOff = (page) => {
-  let path = "";
+  let pathOffCanvas = "";
+  let pathImg = "../";
   if (page === "Accueil") {
-    path = "pages/";
+    pathOffCanvas = "pages/";
+    pathImg = "./";
   }
   return `
-  <div
+        <!-- Botón para abrir el offcanvas -->
+        <img
+          class="header__offcanvas-btn"
+          type="button"
+          src="${pathImg}assets/icons-svg/menu-icon.svg"
+          alt="Button menu"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#headerOffcanvas${page}"
+          aria-controls="headerOffcanvas${page}"
+        />
+        <!-- Offcanvas para móviles -->
+        <div
           class="header__offcanvas offcanvas offcanvas-start"
           tabindex="-1"
           id="headerOffcanvas${page}"
@@ -28,22 +41,22 @@ const createCanvasOff = (page) => {
                   <a class="header__menuOff-link" href="../index.html">Accueil</a>
                 </li>
                 <li class="header__menuOff-item">
-                  <a class="header__menuOff-link" href="${path}lactancia.html"
+                  <a class="header__menuOff-link" href="${pathOffCanvas}lactancia.html"
                     >Allaitement</a
                   >
                 </li>
                 <li class="header__menuOff-item">
-                  <a class="header__menuOff-link" href="${path}soins.html"
+                  <a class="header__menuOff-link" href="${pathOffCanvas}soins.html"
                     >Kinésithérapie</a
                   >
                 </li>
                 <li class="header__menuOff-item">
-                  <a class="header__menuOff-link" href="${path}contacto.html"
+                  <a class="header__menuOff-link" href="${pathOffCanvas}contacto.html"
                     >Contact</a
                   >
                 </li>
                 <li class="header__menuOff-item">
-                  <a class="header__menuOff-link" href="${path}aviso-legal.html"
+                  <a class="header__menuOff-link" href="${pathOffCanvas}aviso-legal.html"
                     >Mentions légales</a
                   >
                 </li>
