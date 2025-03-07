@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const services = [
     {
       name: "Consultante en allaitement IBCLC",
-      img: "./assets/images/img-allaitement.png",
+      img: "./assets/images/img-lactancia.png",
       description: "Je propose un accompagnement  individuel à domicile ou au cabinet.",
       url: "pages/lactancia.html",
     },
@@ -39,5 +39,5 @@ const headerElement = document.querySelector(".header");
 
 // Verificar si existe antes de insertar
 if (headerElement) {
-  headerElement.insertAdjacentHTML("beforeend", createCanvasOff("Accueil"));
+  headerElement.insertAdjacentHTML("beforeend", createHeader("Accueil"));
 }

@@ -3,5 +3,5 @@ const headerElement = document.querySelector(".header");
 
 // Verificar si existe antes de insertar
 if (headerElement) {
-  headerElement.insertAdjacentHTML("beforeend", createCanvasOff("Aviso"));
+  headerElement.insertAdjacentHTML("beforeend", createHeader("Aviso"));
 }

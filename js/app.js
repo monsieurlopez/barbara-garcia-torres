@@ -1,5 +1,5 @@
 //* Funciones globales **/
-const createCanvasOff = (page) => {
+const createHeader = (page) => {
   let pathOffCanvas = "";
   let pathImg = "../";
   let pathIndex = "../";

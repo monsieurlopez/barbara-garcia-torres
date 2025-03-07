@@ -109,5 +109,5 @@ const headerElement = document.querySelector(".header");
 
 // Verificar si existe antes de insertar
 if (headerElement) {
-  headerElement.insertAdjacentHTML("beforeend", createCanvasOff("Contacto"));
+  headerElement.insertAdjacentHTML("beforeend", createHeader("Contacto"));
 }
