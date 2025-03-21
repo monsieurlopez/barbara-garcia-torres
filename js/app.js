@@ -102,17 +102,32 @@ const createHeader = (page) => {
   `;
 };
 
-/*document.addEventListener("DOMContentLoaded", function () {
-  const menuSmallScreen = document.getElementById("mobile-menu");
-
-  // Redirigir al link seleccionado
-  menuSmallScreen.addEventListener("change", function () {
-    const selectedValue = this.value;
-    if (selectedValue) {
-      window.location.href = selectedValue;
-    }
-  });
-});*/
+/* Funcion para crear el footer */
+const createFooter = (page) => {
+  let pathImg = "../";
+  let pathIndex = "../";
+  if (page === "Accueil") {
+    pathImg = "./";
+    pathIndex = "";
+  }
+  return `
+  <div class="footer__contact">
+        <div class="footer__contact-mail">
+          <img src="${pathImg}assets/icons-svg/email-icon.svg" alt="Email icon" />
+          <span>barbaragarciatorres@hotmail.com</span>
+        </div>
+        <div class="footer__contact-phone">
+          <img src="${pathImg}assets/icons-svg/phone-icon.svg" alt="Téléphone icon" />
+          <span>0610740517</span>
+        </div>
+      </div>
+      <p class="footer__legal">
+        <a href="${pathIndex}pages/aviso-legal.html">
+          Mentions Légales | Politique de Confidentialité</a
+        >
+      </p>
+  `;
+};
 
 /* Función que detecta cuando hay scroll en la página para modificar el estilo del footer */
 function ajustarFooter() {

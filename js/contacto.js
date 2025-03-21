@@ -104,10 +104,14 @@ const sendEmail = (datos) => {
   .catch((error) => console.error("Error al enviar el email:", error));
 };
 
-// Seleccionar el header de forma segura
+const page = "Contacto";
+
+// Seleccionar el header y el footer de forma segura
 const headerElement = document.querySelector(".header");
+const footerElement = document.querySelector(".footer");
 
 // Verificar si existe antes de insertar
-if (headerElement) {
-  headerElement.insertAdjacentHTML("beforeend", createHeader("Contacto"));
+if (headerElement && footerElement) {
+  headerElement.insertAdjacentHTML("beforeend", createHeader(page));
+  footerElement.insertAdjacentHTML("beforeend", createFooter(page));
 }
