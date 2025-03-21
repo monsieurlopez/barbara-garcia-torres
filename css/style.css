@@ -202,3 +202,28 @@ footer {
 .offcanvas-body {
   padding: 1rem;
 }
+
+/* Estilos del botón solicitar información */
+.button {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Estilo primario del botón */
+.button--primary {
+  background-color: #e6a4b4;
+  color: #fff;
+  border: 0.1rem solid #e6a4b4;
+}
+
+.button--primary:hover {
+  background-color: #d48a9a;
+  transform: scale(1.05);
+}

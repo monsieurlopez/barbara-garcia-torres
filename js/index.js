@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="card-body card__body">
         <h5 class="card__body-title card-title"><strong>${service.name}</strong></h5>
         <p class="card__body-text card-text">${service.description}</p>
-        <a href="${service.url}" class="card__body-link"> Voir plus </a>
+        <a href="${service.url}" class="card__body-link button button--primary"> Voir plus </a>
       </div>
     </div>
   `

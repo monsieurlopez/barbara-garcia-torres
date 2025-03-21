@@ -1,0 +1,54 @@
+/* Estilos generales */
+
+.main__content {
+  text-align: left;
+  max-width: 55rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.main__text {
+  font-size: 1.25rem;
+  color: #1d0029;
+  line-height: 1.6rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Estilos de la lista */
+.main__list {
+  background-color: #f4d5d3;
+  padding: 1.25rem;
+  border-radius: 0.9rem;
+  list-style-type: none;
+}
+
+.main__list-item {
+  margin-bottom: 0.5rem;
+  padding-left: 0.6rem;
+  border-left: 0.3rem solid #1d0029;
+}
+
+.main__list-item strong {
+  color: #1d0029;
+  font-weight: bold;
+}
+
+/* Estilos de la imagen */
+.main__image-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.main__img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.secondary__img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 1rem;
+}
+
