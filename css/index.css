@@ -52,7 +52,7 @@
 .about__text {
   flex: 1;
   max-width: 30rem;
-  text-align: justify;
+  text-wrap: pretty;
   padding: 1rem;
 }
 

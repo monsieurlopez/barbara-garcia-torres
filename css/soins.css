@@ -1,6 +1,5 @@
 /* Estilos generales */
 .main__content {
-  text-align: left;
   max-width: 55rem;
   margin: 0 auto;
   padding: 2rem;
@@ -13,6 +12,7 @@
 }
 
 .main__text {
+  text-wrap: pretty;
   font-size: 1.25rem;
   color: #1d0029;
   line-height: 1.6rem;
@@ -22,6 +22,7 @@
 
 /* Estilos de la lista */
 .main__list {
+  text-align: left;
   background-color: #f4d5d3;
   padding: 1.25rem;
   border-radius: 0.9rem;
@@ -40,7 +41,21 @@
 }
 
 .main__img {
-  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  row-gap: 1rem;
+}
+
+.main__img-salle {
+  max-width: 75%;
   height: auto;
   border-radius: 1rem;
+}
+
+@media (max-width: 576px) {
+  .main__img-salle {
+    max-width: 100%;
+  }
 }

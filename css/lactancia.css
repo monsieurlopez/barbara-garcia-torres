@@ -1,13 +1,13 @@
 /* Estilos generales */
 
 .main__content {
-  text-align: left;
   max-width: 55rem;
   margin: 0 auto;
   padding: 2rem;
 }
 
 .main__text {
+  text-wrap: pretty;
   font-size: 1.25rem;
   color: #1d0029;
   line-height: 1.6rem;
@@ -17,6 +17,7 @@
 
 /* Estilos de la lista */
 .main__list {
+  text-align: left;
   background-color: #f4d5d3;
   padding: 1.25rem;
   border-radius: 0.9rem;
