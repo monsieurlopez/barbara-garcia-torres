@@ -2,14 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const services = [
     {
       name: "Consultante en allaitement IBCLC",
-      img: "./assets/images/img-lactancia.png",
-      description: "Je propose un accompagnement  individuel à domicile ou au cabinet.",
+      img: "./assets/images/img-lactancia.webp",
+      description:
+        "Je propose un accompagnement  individuel à domicile ou au cabinet.",
       url: "pages/lactancia.html",
     },
     {
       name: "Soin en kinésithérapie",
-      img: "./assets/images/img-kine.png",
-      description: "Spécialisée dans la prise en charge de la femme et de l'enfant.",
+      img: "./assets/images/img-kine.webp",
+      description:
+        "Spécialisée dans la prise en charge de la femme et de l'enfant.",
       url: "pages/soins.html",
     },
   ];
