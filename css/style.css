@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 dl,
@@ -170,9 +170,9 @@ footer {
 /* Estilos del header dentro del offcanvas */
 .header__offcanvas .offcanvas-header {
   height: 5rem;
-  background-color: #F4D5D3;
+  background-color: #f4d5d3;
   padding: 1rem;
-  color: #1D0029;
+  color: #1d0029;
 }
 
 /* Estilos del menú dentro del offcanvas */
@@ -187,14 +187,16 @@ footer {
   padding: 12px 20px;
   font-size: 1rem;
   text-decoration: none;
-  color: #1D0029;
-  transition: background 0.3s, color 0.3s;
+  color: #1d0029;
+  transition:
+    background 0.3s,
+    color 0.3s;
   border-radius: 0.5rem;
 }
 
 .header__menuOff-link:hover {
-  background-color: #F4D5D3;
-  color: #1D0029;
+  background-color: #f4d5d3;
+  color: #1d0029;
   font-weight: bold;
 }
 
@@ -213,13 +215,15 @@ footer {
   border-radius: 2rem;
   text-decoration: none;
   text-align: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 /* Estilo primario del botón */
 .button--primary {
   background-color: #e6a4b4;
-  color: #fff;
+  color: #1d0029;
   border: 0.1rem solid #e6a4b4;
 }
 
