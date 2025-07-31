@@ -145,4 +145,3 @@ function ajustarFooter() {
 // Ejecutar cuando la página cargue y al redimensionar la ventana
 window.addEventListener("load", ajustarFooter);
 window.addEventListener("resize", ajustarFooter);
-

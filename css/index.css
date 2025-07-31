@@ -23,8 +23,7 @@
 }
 
 .card-title {
-  color: #1D0029;
-}
+  color: #1d0029;
 
 .card__body {
   flex-grow: 1;
@@ -83,7 +82,3 @@
     padding: 3.5rem 0;
   }
 }
-
-
-
-

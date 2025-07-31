@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <img src="${service.img}" class="card-img-top" alt="${service.name}">
       </div>
       <div class="card-body card__body">
-        <h5 class="card__body-title card-title"><strong>${service.name}</strong></h5>
+        <h3 class="card__body-title card-title"><strong>${service.name}</strong></h3>
         <p class="card__body-text card-text">${service.description}</p>
         <a href="${service.url}" class="card__body-link button button--primary"> Voir plus </a>
       </div>
