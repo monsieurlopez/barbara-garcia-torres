@@ -5,33 +5,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - Bárbara García Torres</title>
-
     <!-- Descripción para SEO -->
     <meta
       name="description"
       content="Conseils en allaitement et séances de kinésithérapie pour bébés, enfants et adultes."
     />
-
     <!-- Palabras clave para SEO -->
     <meta
       name="keywords"
       content="allaitement, conseillère en allaitement, kinésithérapie, bébé, post-partum, rééducation périnéale, massage bébé, soutien parental, maternité, bien-être, séances de kiné, Cambo-les-Bains, Hélette"
     />
-
     <!-- Autor -->
     <meta name="author" content="Sergio López Ruiz" />
-
-    <!-- Robots (permitir indexación y seguimiento de enlaces) -->
+    <!-- Robots -->
     <meta name="robots" content="contacto, follow" />
-
-    <!-- Open Graph (para redes sociales como Facebook) -->
+    <!-- Open Graph -->
     <meta
       property="og:title"
       content="Conseillère en allaitement & Kinésithérapeute - Cambo-les-Bains & Hélette"
     />
     <meta
       property="og:description"
-      content="Accompagnement en allaitement et séances de kinésithérapie adaptées aux mamans, bébés et adultes. Prenez soin de vous et de votre famille."
+      content="Accompagnement en allaitement et séances de kinésithérapie adaptées aux mamans, bébés et adultes."
     />
     <meta
       property="og:image"
@@ -39,26 +34,21 @@
     />
     <meta property="og:url" content="https://barbaragarciatorresibclc.com/" />
     <meta property="og:type" content="website" />
-
-    <!-- Twitter Card (para Twitter) -->
-    <meta property="twitter:card" content="summary_large_image" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://barbaragarciatorresibclc.com" />
     <meta
-      property="twitter:url"
-      content="https://barbaragarciatorresibclc.com"
-    />
-    <meta
-      property="twitter:title"
+      name="twitter:title"
       content="Conseillère en allaitement & Kinésithérapeute"
     />
     <meta
-      property="twitter:description"
-      content="Soutien en allaitement et kinésithérapie personnalisée pour toute la famille à Cambo-les-Bains et Hélette."
+      name="twitter:description"
+      content="Soutien en allaitement et kinésithérapie personnalisée pour toute la famille."
     />
     <meta
-      property="twitter:image"
+      name="twitter:image"
       content="https://barbaragarciatorresibclc.com/assets/images/img-barbara.webp"
     />
-
     <!-- Favicon -->
     <link
       rel="icon"
@@ -68,22 +58,22 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="../asets/icons-svg/favicon/apple-touch-icon.webp"
+      href="../assets/icons-svg/favicon/apple-touch-icon.webp"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="../asets/icons-svg/favicon/favicon-32x32.webp"
+      href="../assets/icons-svg/favicon/favicon-32x32.webp"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="../asets/icons-svg/favicon/favicon-16x16.webp"
+      href="../assets/icons-svg/favicon/favicon-16x16.webp"
     />
     <link rel="manifest" href="../assets/icons-svg/favicon/site.webmanifest" />
-    <!-- Bootstrap -->
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -91,33 +81,13 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/contacto.css" />
-    <!-- JS -->
-    <script>
-      //ENV
-      window.appConfig = {
-        publicKey: "%EMAILJS_PUBLIC_KEY%",
-        serviceId: "%EMAILJS_SERVICE_ID%",
-        templateId: "%EMAILJS_TEMPLATE_ID%",
-      };
-
-      //Config JS para local
-      if (window.appConfig.publicKey.includes("%")) {
-        const script = document.createElement("script");
-        script.src = "../js/config.js";
-        script.defer = true;
-        document.head.appendChild(script);
-      }
-    </script>
-    <script src="../js/app.js" defer></script>
-    <script src="../js/contacto.js" defer></script>
-    <!-- EmailJs -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </head>
   <body>
     <header class="header">
-      <!-- Add your header content here -->
+      <!-- Header dinámico -->
     </header>
     <main>
+      <!-- Sección de contacto -->
       <section class="contacto">
         <h1 class="contacto__titulo title__section">
           Voulez-vous me contacter?
@@ -125,11 +95,11 @@
         <p class="contacto__texto">
           Champs obligatoires <span class="contacto__obligatorio">*</span>
         </p>
-
         <form
           class="contacto__formulario row g-3 needs-validation m-auto"
           novalidate
         >
+          <!-- Campos del formulario -->
           <div class="col-md-6">
             <label for="nombre" class="form-label"
               >Prénom <span class="contacto__obligatorio">*</span></label
@@ -138,12 +108,10 @@
             <div class="valid-feedback">Tout est correct !</div>
             <div class="invalid-feedback">Veuillez entrer votre prénom.</div>
           </div>
-
           <div class="col-md-6">
             <label for="apellidos" class="form-label">Nom de famille</label>
             <input type="text" class="form-control" id="apellidos" />
           </div>
-
           <div class="col-md-6">
             <label for="email" class="form-label"
               >Email <span class="contacto__obligatorio">*</span></label
@@ -157,7 +125,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-md-6">
             <label for="asunto" class="form-label"
               >Sujet <span class="contacto__obligatorio">*</span></label
@@ -169,8 +136,8 @@
               <option value="information" data-text="Information">
                 Information
               </option>
-              <option value="rendez-vous" data-text="rendez-vous">
-                Prender rendez-vous
+              <option value="rendez-vous" data-text="Prendre rendez-vous">
+                Prendre rendez-vous
               </option>
               <option value="ateliers" data-text="Ateliers">Ateliers</option>
               <option value="suggestion" data-text="Suggestion">
@@ -181,12 +148,10 @@
             <div class="valid-feedback">Tout est correct !</div>
             <div class="invalid-feedback">Veuillez sélectionner un sujet.</div>
           </div>
-
           <div class="mb-3">
             <label for="mensaje" class="form-label">Message</label>
             <textarea class="form-control" id="mensaje" rows="3"></textarea>
           </div>
-
           <div class="col-md-6 d-inline-block w-md-50 m-auto">
             <div class="form-check">
               <input
@@ -205,7 +170,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-12">
             <button class="button button--primary" type="submit">
               Envoyer
@@ -213,6 +177,8 @@
           </div>
         </form>
       </section>
+
+      <!-- Sección del mapa -->
       <section class="direccion">
         <h2 class="direccion__title">Localisation</h2>
         <div class="direccion__map">
@@ -229,16 +195,34 @@
       </section>
     </main>
     <footer class="footer">
-      <!-- Add your footer content here dinamically -->
+      <!-- Footer dinámico -->
     </footer>
     <script>
-      window.va =
-        window.va ||
-        function () {
-          (window.vaq = window.vaq || []).push(arguments);
-        };
+      //ENV
+      window.appConfig = {
+        publicKey: "%EMAILJS_PUBLIC_KEY%",
+        serviceId: "%EMAILJS_SERVICE_ID%",
+        templateId: "%EMAILJS_TEMPLATE_ID%",
+      };
+
+      //config.js en localhost
+      if (
+        window.location.hostname === "localhost" ||
+        window.location.hostname === "127.0.0.1"
+      ) {
+        const script = document.createElement("script");
+        script.src = "../js/config.js";
+        script.defer = true;
+        document.head.appendChild(script);
+      }
     </script>
-    <script defer src="/_vercel/insights/script.js"></script>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts locales -->
+    <script src="../js/app.js" defer></script>
+    <script src="../js/contacto.js" defer></script>
   </body>
 </html>
