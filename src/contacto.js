@@ -1,6 +1,6 @@
 //import "../css/contacto.css";
 //import "../../src/main.js";
-import { createHeader, createFooter } from "./app.js";
+import { createHeader, createFooter } from "../public/js/app.js";
 /* Función que genera la respuesta tras enviar el formulario --> crea un modal */
 const generateMessage = (objeto) => {
   // Aplica el blur al main
@@ -89,9 +89,9 @@ const generateMessage = (objeto) => {
 
 //* Función para enviar el correo con EmailJS */
 // Configurar EmailJS
-const publicKey = window.appConfig.publicKey;
-const serviceId = window.appConfig.serviceId;
-const templateId = window.appConfig.templateId;
+const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
 emailjs.init(publicKey);
 
