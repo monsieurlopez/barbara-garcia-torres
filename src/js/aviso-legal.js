@@ -1,3 +1,4 @@
+import "../main.js";
 import "../css/aviso-legal.css";
 import { createHeader, createFooter } from "./app.js";
 const page = "Aviso";

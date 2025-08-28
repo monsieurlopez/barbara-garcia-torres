@@ -1,3 +1,4 @@
+import "../main.js";
 import "../css/lactancia.css";
 import { createHeader, createFooter } from "./app.js";
 const page = "Lactancia";

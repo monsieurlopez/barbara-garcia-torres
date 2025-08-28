@@ -1,3 +1,4 @@
+import "../main.js";
 import "../css/soins.css";
 import { createHeader, createFooter } from "./app.js";
 const page = "Soins";
