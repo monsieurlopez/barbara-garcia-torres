@@ -1,4 +1,4 @@
-import { createHeader, createFooter } from "./app.js";
+import "../css/aviso-legal.css";
 const page = "Aviso";
 
 // Seleccionar el header y el footer de forma segura

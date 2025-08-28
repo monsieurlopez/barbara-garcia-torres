@@ -1,4 +1,4 @@
-import { createHeader, createFooter } from "./app.js";
+import "../css/lactancia.css";
 const page = "Lactancia";
 
 // Seleccionar el header y el footer de forma segura

@@ -1,4 +1,4 @@
-import { createHeader, createFooter } from "./app.js";
+import "../css/soins.css";
 const page = "Soins";
 
 // Seleccionar el header y el footer de forma segura

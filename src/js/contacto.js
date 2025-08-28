@@ -1,4 +1,4 @@
-import { createHeader, createFooter } from "./app.js";
+import "../css/contacto.css";
 /* Función que genera la respuesta tras enviar el formulario --> crea un modal */
 const generateMessage = (objeto) => {
   // Aplica el blur al main
