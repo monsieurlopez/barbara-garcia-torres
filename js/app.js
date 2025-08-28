@@ -1,4 +1,7 @@
 //* Funciones globales **/
+import dotenv from "dotenv";
+dotenv.config();
+
 const createHeader = (page) => {
   let pathOffCanvas = "";
   let pathImg = "../";

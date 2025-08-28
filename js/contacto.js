@@ -49,7 +49,6 @@ const generateMessage = (objeto) => {
   modal.querySelector(".btn-danger").addEventListener("click", closeModal);
 };
 
-
 //* Llamamos a esta funcion de manera automatica al entrar en la pagina contacto.html */
 /* Utilizamos el código que nos proporciona Bootstrap pero modificado para nuestro formulario */
 (() => {
@@ -87,21 +86,23 @@ const generateMessage = (objeto) => {
 
 //* Función para enviar el correo con EmailJS */
 // Configurar EmailJS
-const publicKey = "3a1KJ0W1S0vOpCRjW";
-const serviceId = "service_ib1fs2u";
-const templateId = "template_znhf7wk";
+const publicKey = process.env.EMAILJS_PUBLIC_KEY;
+const serviceId = process.env.EMAILJS_SERVICE_ID;
+const templateId = process.env.EMAILJS_TEMPLATE_ID;
+
 emailjs.init(publicKey);
 
 const sendEmail = (datos) => {
   let prenom = datos.nombre;
   let nom = datos.apellidos || "";
-  emailjs.send(serviceId, templateId, {
-    from_name: `${prenom} ${nom}`,
-    user_email: datos.email,
-    subject: datos.asunto,
-    message: datos.mensaje || "Sans message",
-  })
-  .catch((error) => console.error("Error al enviar el email:", error));
+  emailjs
+    .send(serviceId, templateId, {
+      from_name: `${prenom} ${nom}`,
+      user_email: datos.email,
+      subject: datos.asunto,
+      message: datos.mensaje || "Sans message",
+    })
+    .catch((error) => console.error("Error al enviar el email:", error));
 };
 
 const page = "Contacto";
