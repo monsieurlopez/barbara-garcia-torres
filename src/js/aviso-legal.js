@@ -1,5 +1,5 @@
-import "../main.js";
 import "../css/aviso-legal.css";
+import "../main.js";
 import { createHeader, createFooter } from "./app.js";
 const page = "Aviso";
 

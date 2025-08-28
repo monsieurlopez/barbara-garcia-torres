@@ -1,5 +1,5 @@
-import "../main.js";
 import "../css/contacto.css";
+import "../main.js";
 import { createHeader, createFooter } from "./app.js";
 /* Función que genera la respuesta tras enviar el formulario --> crea un modal */
 const generateMessage = (objeto) => {

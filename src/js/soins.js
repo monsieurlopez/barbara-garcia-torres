@@ -1,5 +1,5 @@
-import "../main.js";
 import "../css/soins.css";
+import "../main.js";
 import { createHeader, createFooter } from "./app.js";
 const page = "Soins";
 
