@@ -1,3 +1,4 @@
+import "../css/index.css";
 import { createHeader, createFooter } from "./app.js";
 
 document.addEventListener("DOMContentLoaded", () => {

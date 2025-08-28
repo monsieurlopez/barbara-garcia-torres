@@ -1,4 +1,5 @@
 import "../css/lactancia.css";
+import { createHeader, createFooter } from "./app.js";
 const page = "Lactancia";
 
 // Seleccionar el header y el footer de forma segura
