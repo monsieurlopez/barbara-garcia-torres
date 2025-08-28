@@ -1,7 +1,7 @@
-import "../css/lactancia.css";
-import "../main.js";
+import "../css/soins.css";
+import "../../src/main.js";
 import { createHeader, createFooter } from "./app.js";
-const page = "Lactancia";
+const page = "Soins";
 
 // Seleccionar el header y el footer de forma segura
 const headerElement = document.querySelector(".header");

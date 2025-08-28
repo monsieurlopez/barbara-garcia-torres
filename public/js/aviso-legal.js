@@ -1,7 +1,7 @@
-import "../css/soins.css";
-import "../main.js";
+import "../css/aviso-legal.css";
+import "../../src/main.js";
 import { createHeader, createFooter } from "./app.js";
-const page = "Soins";
+const page = "Aviso";
 
 // Seleccionar el header y el footer de forma segura
 const headerElement = document.querySelector(".header");
