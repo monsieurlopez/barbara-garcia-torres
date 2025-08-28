@@ -1,5 +1,5 @@
 //* Funciones globales **/
-const createHeader = () => {
+export const createHeader = () => {
   return `
       <!-- Img Logo Bárbara -->
       <a href="/index.html">
@@ -95,7 +95,7 @@ const createHeader = () => {
 };
 
 /* Funcion para crear el footer */
-const createFooter = () => {
+export const createFooter = () => {
   return `
   <div class="footer__contact">
         <div class="footer__contact-mail">
@@ -116,7 +116,7 @@ const createFooter = () => {
 };
 
 /* Función que detecta cuando hay scroll en la página para modificar el estilo del footer */
-function ajustarFooter() {
+export const ajustarFooter = () => {
   const footer = document.querySelector(".footer");
   const windowHeight = window.innerHeight;
   const bodyHeight = document.body.offsetHeight;
@@ -126,7 +126,7 @@ function ajustarFooter() {
   } else {
     footer.classList.remove("footer__fixe"); // Si hay scroll
   }
-}
+};
 
 // Ejecutar cuando la página cargue y al redimensionar la ventana
 window.addEventListener("load", ajustarFooter);

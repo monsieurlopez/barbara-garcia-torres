@@ -1,3 +1,4 @@
+import { createHeader, createFooter } from "./app.js";
 const page = "Aviso";
 
 // Seleccionar el header y el footer de forma segura

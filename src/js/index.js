@@ -1,3 +1,5 @@
+import { createHeader, createFooter, ajustarFooter } from "./app.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   const services = [
     {
