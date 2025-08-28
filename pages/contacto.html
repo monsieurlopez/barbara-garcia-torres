@@ -92,8 +92,23 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/contacto.css" />
     <!-- JS -->
+    <script>
+      //ENV
+      window.appConfig = {
+        publicKey: "%EMAILJS_PUBLIC_KEY%",
+        serviceId: "%EMAILJS_SERVICE_ID%",
+        templateId: "%EMAILJS_TEMPLATE_ID%",
+      };
+
+      //Config JS para local
+      if (window.appConfig.publicKey.includes("%")) {
+        const script = document.createElement("script");
+        script.src = "../js/config.js";
+        script.defer = true;
+        document.head.appendChild(script);
+      }
+    </script>
     <script src="../js/app.js" defer></script>
-    <script src="../js//config.js" defer></script>
     <script src="../js/contacto.js" defer></script>
     <!-- EmailJs -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
