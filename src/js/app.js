@@ -17,16 +17,16 @@ export const createHeader = () => {
             <a class="header__menu-link" href="/index.html">Accueil</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="/pages/lactancia.html">Allaitement</a>
+            <a class="header__menu-link" href="src/pages/lactancia.html">Allaitement</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="/pages/soins.html">Kinésithérapie</a>
+            <a class="header__menu-link" href="src/pages/soins.html">Kinésithérapie</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="/pages/contacto.html">Contact</a>
+            <a class="header__menu-link" href="src/pages/contacto.html">Contact</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="/pages/aviso-legal.html"
+            <a class="header__menu-link" href="src/pages/aviso-legal.html"
               >Mentions légales</a
             >
           </li>
@@ -68,22 +68,22 @@ export const createHeader = () => {
               <a class="header__menuOff-link" href="/index.html">Accueil</a>
             </li>
             <li class="header__menuOff-item">
-              <a class="header__menuOff-link" href="/pages/lactancia.html"
+              <a class="header__menuOff-link" href="src/pages/lactancia.html"
                 >Allaitement</a
               >
             </li>
             <li class="header__menuOff-item">
-              <a class="header__menuOff-link" href="/pages/soins.html"
+              <a class="header__menuOff-link" href="src/pages/soins.html"
                 >Kinésithérapie</a
               >
             </li>
             <li class="header__menuOff-item">
-              <a class="header__menuOff-link" href="/pages/contacto.html"
+              <a class="header__menuOff-link" href="src/pages/contacto.html"
                 >Contact</a
               >
             </li>
             <li class="header__menuOff-item">
-              <a class="header__menuOff-link" href="/pages/aviso-legal.html"
+              <a class="header__menuOff-link" href="src/pages/aviso-legal.html"
                 >Mentions légales</a
               >
             </li>
