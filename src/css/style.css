@@ -16,8 +16,7 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   margin: auto;
-  background-image: url(../assets/images/fondo-web-1.webp);
-  /*background-color: #FAEFDC;*/
+  background-image: url(/assets/images/fondo-web-1.webp);
 }
 
 main {
