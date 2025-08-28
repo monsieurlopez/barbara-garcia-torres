@@ -86,9 +86,9 @@ const generateMessage = (objeto) => {
 
 //* Función para enviar el correo con EmailJS */
 // Configurar EmailJS
-const publicKey = process.env.EMAILJS_PUBLIC_KEY;
-const serviceId = process.env.EMAILJS_SERVICE_ID;
-const templateId = process.env.EMAILJS_TEMPLATE_ID;
+const publicKey = config.publicKey;
+const serviceId = config.serviceId;
+const templateId = config.templateId;
 
 emailjs.init(publicKey);
 
