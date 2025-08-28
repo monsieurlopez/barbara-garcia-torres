@@ -1,4 +1,4 @@
-//import "./css/style.css";
+import "./contacto.js";
 
 window.__ENV__ = {
   VITE_EMAILJS_PUBLIC_KEY: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
