@@ -1,16 +1,8 @@
 //* Funciones globales **/
-const createHeader = (page) => {
-  let pathOffCanvas = "";
-  let pathImg = "../";
-  let pathIndex = "../";
-  if (page === "Accueil") {
-    pathOffCanvas = "pages/";
-    pathImg = "./";
-    pathIndex = "";
-  }
+const createHeader = () => {
   return `
       <!-- Img Logo Bárbara -->
-      <a href="${pathImg}index.html">
+      <a href="/index.html">
         <img
           class="header__logo"
           src="../assets/icons-svg/logo-barbara.svg"
@@ -22,19 +14,19 @@ const createHeader = (page) => {
       <nav class="header__nav">
         <ul class="header__menu">
           <li class="header__menu-item">
-            <a class="header__menu-link" href="${pathIndex}index.html">Accueil</a>
+            <a class="header__menu-link" href="/index.html">Accueil</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="${pathOffCanvas}lactancia.html">Allaitement</a>
+            <a class="header__menu-link" href="/pages/lactancia.html">Allaitement</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="${pathOffCanvas}soins.html">Kinésithérapie</a>
+            <a class="header__menu-link" href="/pages/soins.html">Kinésithérapie</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="${pathOffCanvas}contacto.html">Contact</a>
+            <a class="header__menu-link" href="/pages/contacto.html">Contact</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="${pathOffCanvas}aviso-legal.html"
+            <a class="header__menu-link" href="/pages/aviso-legal.html"
               >Mentions légales</a
             >
           </li>
@@ -45,23 +37,23 @@ const createHeader = (page) => {
       <img
         class="header__offcanvas-btn"
         type="button"
-        src="${pathImg}assets/icons-svg/menu-icon.svg"
+        src="/assets/icons-svg/menu-icon.svg"
         alt="Button menu"
         data-bs-toggle="offcanvas"
-        data-bs-target="#headerOffcanvas${page}"
-        aria-controls="headerOffcanvas${page}"
+        data-bs-target="#headerOffcanvas"
+        aria-controls="headerOffcanvas"
       />
 
       <!-- Offcanvas para móviles -->
       <div
         class="header__offcanvas offcanvas offcanvas-start"
         tabindex="-1"
-        id="headerOffcanvas${page}"
-        aria-labelledby="headerOffcanvas${page}Label"
+        id="headerOffcanvas"
+        aria-labelledby="headerOffcanvasLabel"
         data-bs-scroll="true"
       >
       <div class="offcanvas-header">
-        <h4 class="offcanvas-title" id="headerOffcanvas${page}Label">Menu</h4>
+        <h4 class="offcanvas-title" id="headerOffcanvasLabel">Menu</h4>
         <button
           type="button"
           class="btn-close"
@@ -73,25 +65,25 @@ const createHeader = (page) => {
         <nav class="header__offcanvas-menu">
           <ul class="header__menuOff">
             <li class="header__menuOff-item">
-              <a class="header__menuOff-link" href="../index.html">Accueil</a>
+              <a class="header__menuOff-link" href="/index.html">Accueil</a>
             </li>
             <li class="header__menuOff-item">
-              <a class="header__menuOff-link" href="${pathOffCanvas}lactancia.html"
+              <a class="header__menuOff-link" href="/pages/lactancia.html"
                 >Allaitement</a
               >
             </li>
             <li class="header__menuOff-item">
-              <a class="header__menuOff-link" href="${pathOffCanvas}soins.html"
+              <a class="header__menuOff-link" href="/pages/soins.html"
                 >Kinésithérapie</a
               >
             </li>
             <li class="header__menuOff-item">
-              <a class="header__menuOff-link" href="${pathOffCanvas}contacto.html"
+              <a class="header__menuOff-link" href="/pages/contacto.html"
                 >Contact</a
               >
             </li>
             <li class="header__menuOff-item">
-              <a class="header__menuOff-link" href="${pathOffCanvas}aviso-legal.html"
+              <a class="header__menuOff-link" href="/pages/aviso-legal.html"
                 >Mentions légales</a
               >
             </li>
@@ -103,26 +95,20 @@ const createHeader = (page) => {
 };
 
 /* Funcion para crear el footer */
-const createFooter = (page) => {
-  let pathImg = "../";
-  let pathIndex = "../";
-  if (page === "Accueil") {
-    pathImg = "./";
-    pathIndex = "";
-  }
+const createFooter = () => {
   return `
   <div class="footer__contact">
         <div class="footer__contact-mail">
-          <img src="${pathImg}assets/icons-svg/email-icon.svg" alt="Email icon" />
+          <img src="/assets/icons-svg/email-icon.svg" alt="Email icon" />
           <span>barbaragarciatorres@hotmail.com</span>
         </div>
         <div class="footer__contact-phone">
-          <img src="${pathImg}assets/icons-svg/phone-icon.svg" alt="Téléphone icon" />
+          <img src="/assets/icons-svg/phone-icon.svg" alt="Téléphone icon" />
           <span>0610740517</span>
         </div>
       </div>
       <p class="footer__legal">
-        <a href="${pathIndex}pages/aviso-legal.html">
+        <a href="/pages/aviso-legal.html">
           Mentions Légales | Politique de Confidentialité</a
         >
       </p>
