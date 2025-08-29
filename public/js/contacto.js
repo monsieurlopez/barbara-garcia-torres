@@ -87,9 +87,11 @@ const generateMessage = (objeto) => {
 
 //* Función para enviar el correo con EmailJS */
 // Configurar EmailJS
-const publicKey = "3a1KJ0W1S0vOpCRjW";
-const serviceId = "service_ib1fs2u";
-const templateId = "template_znhf7wk";
+const publicKey = atob("M2ExS0owVzFTMHZPcENSalc=");
+const serviceId = atob("c2VydmljZV9pYjFmczJ1");
+const templateId = atob("dGVtcGxhdGVfem5oZjd3aw==");
+
+console.log(publicKey, serviceId, templateId);
 
 emailjs.init(publicKey);
 
