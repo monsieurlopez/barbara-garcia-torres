@@ -1,5 +1,4 @@
 import { createHeader, createFooter } from "./app.js";
-console.log("Usando el contacto.js");
 /* Función que genera la respuesta tras enviar el formulario --> crea un modal */
 const generateMessage = (objeto) => {
   // Aplica el blur al main

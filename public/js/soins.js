@@ -1,5 +1,3 @@
-//import "../css/soins.css";
-//import "../../src/main.js";
 import { createHeader, createFooter } from "./app.js";
 const page = "Soins";
 
