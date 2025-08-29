@@ -88,9 +88,9 @@ const generateMessage = (objeto) => {
 
 //* Función para enviar el correo con EmailJS */
 // Configurar EmailJS
-const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const publicKey = "3a1KJ0W1S0vOpCRjW";
+const serviceId = "service_ib1fs2u";
+const templateId = "template_znhf7wk";
 
 emailjs.init(publicKey);
 
