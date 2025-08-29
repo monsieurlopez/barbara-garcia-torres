@@ -91,8 +91,6 @@ const publicKey = atob("M2ExS0owVzFTMHZPcENSalc=");
 const serviceId = atob("c2VydmljZV9pYjFmczJ1");
 const templateId = atob("dGVtcGxhdGVfem5oZjd3aw==");
 
-console.log(publicKey, serviceId, templateId);
-
 emailjs.init(publicKey);
 
 const sendEmail = (datos) => {
